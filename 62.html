@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEEDLE DESTROYER - Wilson Health Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #1e3a8a;
+            --accent: #22c55e;
+            --bg-light: #f0f9ff;
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; padding-top: 80px; }
+        
+        nav { background: var(--white); padding: 0.8rem 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--primary); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .brand { color: var(--primary); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; }
+        .logo-text .sub-brand { color: var(--secondary); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; }
+        
+        .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-btn { color: var(--secondary); font-size: 1.3rem; text-decoration: none; position: relative; transition: var(--transition); }
+        .nav-btn:hover { color: var(--primary); transform: translateY(-2px); }
+        .badge { position: absolute; top: -8px; right: -10px; background: var(--primary); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; font-weight: 700; }
+        
+        .product-container { max-width: 1300px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 100px 500px 1fr 300px; gap: 30px; }
+        @media (max-width: 1200px) { .product-container { grid-template-columns: 100px 450px 1fr; } .buy-box { position: static; grid-column: 1 / -1; } }
+        @media (max-width: 900px) { .product-container { grid-template-columns: 1fr; } .thumb-strip { display: none; } }
+        
+        .thumb-strip { display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; scrollbar-width: none; }
+        .thumb-strip::-webkit-scrollbar { display: none; }
+        .thumb { width: 70px; height: 70px; border: 2px solid var(--border); border-radius: 10px; padding: 5px; cursor: pointer; transition: var(--transition); background: white; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
+        .thumb img { width: 100%; height: 100%; object-fit: contain; }
+        
+        .main-img-box { position: sticky; top: 100px; background: white; border-radius: 20px; height: 500px; display: flex; align-items: center; justify-content: center; padding: 20px; box-shadow: var(--shadow); }
+        .main-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .details-box { padding: 0 10px; }
+        .cat-tag { display: inline-block; padding: 4px 12px; background: rgba(14, 165, 233, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .p-title { font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem; line-height: 1.2; }
+        .rating-box { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+        .stars { color: #fbbf24; }
+        
+        .price-area { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 2rem; border-left: 4px solid var(--primary); }
+        .discount-row { color: #ef4444; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .p-price { font-size: 2.5rem; font-weight: 800; color: var(--secondary); display: flex; align-items: baseline; gap: 5px; }
+        .p-price span { font-size: 1.2rem; font-weight: 600; color: var(--primary); }
+        .mrp-row { color: var(--text-light); text-decoration: line-through; font-size: 1rem; }
+        
+        .buy-box { border: 2px solid var(--border); border-radius: 20px; padding: 25px; height: fit-content; position: sticky; top: 100px; background: white; box-shadow: var(--shadow); }
+        .status-stock { color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+        .qty-row { margin-bottom: 1.5rem; }
+        .qty-btn-box { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 12px; width: fit-content; overflow: hidden; }
+        .qty-btn { padding: 8px 15px; background: none; border: none; cursor: pointer; font-weight: 800; transition: var(--transition); }
+        .qty-btn:hover { background: var(--bg-light); }
+        .qty-val { padding: 0 15px; font-weight: 700; }
+        
+        .action-btns { display: flex; flex-direction: column; gap: 12px; }
+        .btn { border: none; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: var(--transition); font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-cart { background: var(--secondary); color: white; }
+        .btn-cart:hover { transform: scale(1.02); background: #162e70; }
+        .btn-buy { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2); }
+        .btn-buy:hover { transform: scale(1.02); background: var(--primary-dark); }
+        .btn-wish { background: white; border: 2px solid var(--border); color: var(--secondary); }
+        .btn-wish.active { border-color: #ef4444; color: #ef4444; }
+        
+        .p-tabs { margin-top: 2rem; }
+        .tab-nav { display: flex; gap: 2rem; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
+        .tab-item { padding: 10px 0; cursor: pointer; font-weight: 700; color: var(--text-light); position: relative; }
+        .tab-item.active { color: var(--primary); }
+        .tab-item.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--primary); }
+        .tab-pane { display: none; font-size: 0.95rem; color: #4b5563; }
+        .tab-pane.active { display: block; }
+        
+        .toast { position: fixed; bottom: 30px; right: 30px; background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: translateY(120%); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10000; }
+        .toast.show { transform: translateY(0); }
+        
+        footer { background: var(--secondary); color: white; padding: 4rem 5% 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Wilson Logo">
+            <div class="logo-text">
+                <span class="brand">WILSON</span>
+                <span class="sub-brand">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="index.html#open-cart" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="index.html#wishlist" class="nav-btn"><i class="fas fa-heart"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="thumb-strip" id="thumb-strip">
+            <!-- Thumbs injected here -->
+        </div>
+        <div class="main-img-box">
+            <img id="main-product-img" src="https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg" alt="NEEDLE DESTROYER">
+        </div>
+        <div class="details-box">
+            <span class="cat-tag">Surgical</span>
+            <h1 class="p-title">NEEDLE DESTROYER</h1>
+            <div class="rating-box">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <span style="color: var(--text-light); font-size: 0.85rem;">(450+ Verified Reviews)</span>
+            </div>
+            
+            <div class="price-area">
+                <div class="discount-row">Special Discount -27% OFF</div>
+                <div class="p-price"><span>₹</span>1,499.00</div>
+                <div class="mrp-row">M.R.P.: ₹2,081.94</div>
+                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 10px;">Price inclusive of all taxes, GST 18%</p>
+            </div>
+
+            <div class="p-tabs">
+                <div class="tab-nav">
+                    <div class="tab-item active" onclick="switchTab(event, 'desc-pane')">Description</div>
+                    <div class="tab-item" onclick="switchTab(event, 'usage-pane')">How to Use</div>
+                </div>
+                <div id="desc-pane" class="tab-pane active">
+                    <p>Finger Clips and Needle Destroyers.</p>
+                </div>
+                <div id="usage-pane" class="tab-pane">
+                    <p>Needle Destroyer: Electrically melts needles to prevent accidental stabs.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buy-box">
+            <div class="status-stock"><i class="fas fa-check-circle"></i> In Stock & Ready to Ship</div>
+            <div class="qty-row">
+                <p style="font-size: 0.85rem; margin-bottom: 8px; font-weight: 700;">Quantity</p>
+                <div class="qty-btn-box">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <span class="qty-val" id="qty-display">1</span>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <button class="btn btn-buy" onclick="buyNow()"><i class="fas fa-bolt"></i> Buy Now</button>
+                <button class="btn btn-wish" id="wish-btn" onclick="toggleWishlist()"><i class="far fa-heart"></i> Add to Wishlist</button>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: var(--text-light); display: flex; gap: 8px;">
+                    <i class="fas fa-truck" style="color: var(--primary);"></i> Express 1-Day Delivery in Hyderabad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Item added successfully!</div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Wilson Health Care</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;">India's leading provider of certified medical equipment and professional healthcare services.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: #475569; font-size: 0.8rem;">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const product = {
+            id: 62,
+            name: "NEEDLE DESTROYER",
+            price: 1499.0,
+            image: "https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg",
+            category: "Surgical",
+            images: ["https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg", "data:image/jpeg;base64,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", "https://5.imimg.com/data5/SELLER/Default/2022/4/FO/MM/OC/22243072/electric-needle-syringe-destroyer.jpg"]
+        };
+
+        const thumbStrip = document.getElementById('thumb-strip');
+        if (product.images && product.images.length > 0) {
+            thumbStrip.innerHTML = product.images.map((img, i) => `
+                <div class="thumb ${i === 0 ? 'active' : ''}" onmouseover="changeMainImg(this, '${img}')">
+                    <img src="${img}" alt="Thumb ${i}">
+                </div>
+            `).join('');
+        }
+
+        function changeMainImg(el, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        let quantity = 1;
+        function updateQty(delta) {
+            quantity = Math.max(1, quantity + delta);
+            document.getElementById('qty-display').innerText = quantity;
+        }
+
+        function switchTab(evt, paneId) {
+            document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+            document.getElementById(paneId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        function updateBadge() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        function addToCart() {
+            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            if (!user) { alert("Please login on the home page first"); window.location.href = 'index.html'; return; }
+            
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(i => i.id === product.id);
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push({ ...product, quantity: quantity, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            showToast("Item added to cart!");
+            updateBadge();
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location.href = 'index.html#open-cart';
+        }
+
+        function toggleWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            const idx = wishlist.findIndex(id => id === product.id);
+            const btn = document.getElementById('wish-btn');
+            
+            if (idx > -1) {
+                wishlist.splice(idx, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+                showToast("Removed from wishlist");
+            } else {
+                wishlist.push(product.id);
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+                showToast("Added to wishlist!");
+            }
+            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+        }
+
+        function checkWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            if (wishlist.includes(product.id)) {
+                const btn = document.getElementById('wish-btn');
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+            }
+        }
+
+        // Init
+        updateBadge();
+        checkWishlist();
+    </script>
+</body>
+</html>

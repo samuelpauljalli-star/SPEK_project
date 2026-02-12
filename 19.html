@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRASOUND JELLY JAR 5 KG - Wilson Health Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #1e3a8a;
+            --accent: #22c55e;
+            --bg-light: #f0f9ff;
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; padding-top: 80px; }
+        
+        nav { background: var(--white); padding: 0.8rem 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--primary); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .brand { color: var(--primary); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; }
+        .logo-text .sub-brand { color: var(--secondary); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; }
+        
+        .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-btn { color: var(--secondary); font-size: 1.3rem; text-decoration: none; position: relative; transition: var(--transition); }
+        .nav-btn:hover { color: var(--primary); transform: translateY(-2px); }
+        .badge { position: absolute; top: -8px; right: -10px; background: var(--primary); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; font-weight: 700; }
+        
+        .product-container { max-width: 1300px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 100px 500px 1fr 300px; gap: 30px; }
+        @media (max-width: 1200px) { .product-container { grid-template-columns: 100px 450px 1fr; } .buy-box { position: static; grid-column: 1 / -1; } }
+        @media (max-width: 900px) { .product-container { grid-template-columns: 1fr; } .thumb-strip { display: none; } }
+        
+        .thumb-strip { display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; scrollbar-width: none; }
+        .thumb-strip::-webkit-scrollbar { display: none; }
+        .thumb { width: 70px; height: 70px; border: 2px solid var(--border); border-radius: 10px; padding: 5px; cursor: pointer; transition: var(--transition); background: white; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
+        .thumb img { width: 100%; height: 100%; object-fit: contain; }
+        
+        .main-img-box { position: sticky; top: 100px; background: white; border-radius: 20px; height: 500px; display: flex; align-items: center; justify-content: center; padding: 20px; box-shadow: var(--shadow); }
+        .main-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .details-box { padding: 0 10px; }
+        .cat-tag { display: inline-block; padding: 4px 12px; background: rgba(14, 165, 233, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .p-title { font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem; line-height: 1.2; }
+        .rating-box { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+        .stars { color: #fbbf24; }
+        
+        .price-area { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 2rem; border-left: 4px solid var(--primary); }
+        .discount-row { color: #ef4444; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .p-price { font-size: 2.5rem; font-weight: 800; color: var(--secondary); display: flex; align-items: baseline; gap: 5px; }
+        .p-price span { font-size: 1.2rem; font-weight: 600; color: var(--primary); }
+        .mrp-row { color: var(--text-light); text-decoration: line-through; font-size: 1rem; }
+        
+        .buy-box { border: 2px solid var(--border); border-radius: 20px; padding: 25px; height: fit-content; position: sticky; top: 100px; background: white; box-shadow: var(--shadow); }
+        .status-stock { color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+        .qty-row { margin-bottom: 1.5rem; }
+        .qty-btn-box { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 12px; width: fit-content; overflow: hidden; }
+        .qty-btn { padding: 8px 15px; background: none; border: none; cursor: pointer; font-weight: 800; transition: var(--transition); }
+        .qty-btn:hover { background: var(--bg-light); }
+        .qty-val { padding: 0 15px; font-weight: 700; }
+        
+        .action-btns { display: flex; flex-direction: column; gap: 12px; }
+        .btn { border: none; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: var(--transition); font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-cart { background: var(--secondary); color: white; }
+        .btn-cart:hover { transform: scale(1.02); background: #162e70; }
+        .btn-buy { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2); }
+        .btn-buy:hover { transform: scale(1.02); background: var(--primary-dark); }
+        .btn-wish { background: white; border: 2px solid var(--border); color: var(--secondary); }
+        .btn-wish.active { border-color: #ef4444; color: #ef4444; }
+        
+        .p-tabs { margin-top: 2rem; }
+        .tab-nav { display: flex; gap: 2rem; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
+        .tab-item { padding: 10px 0; cursor: pointer; font-weight: 700; color: var(--text-light); position: relative; }
+        .tab-item.active { color: var(--primary); }
+        .tab-item.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--primary); }
+        .tab-pane { display: none; font-size: 0.95rem; color: #4b5563; }
+        .tab-pane.active { display: block; }
+        
+        .toast { position: fixed; bottom: 30px; right: 30px; background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: translateY(120%); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10000; }
+        .toast.show { transform: translateY(0); }
+        
+        footer { background: var(--secondary); color: white; padding: 4rem 5% 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Wilson Logo">
+            <div class="logo-text">
+                <span class="brand">WILSON</span>
+                <span class="sub-brand">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="index.html#open-cart" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="index.html#wishlist" class="nav-btn"><i class="fas fa-heart"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="thumb-strip" id="thumb-strip">
+            <!-- Thumbs injected here -->
+        </div>
+        <div class="main-img-box">
+            <img id="main-product-img" src="https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg" alt="ULTRASOUND JELLY JAR 5 KG">
+        </div>
+        <div class="details-box">
+            <span class="cat-tag">Diagnostics</span>
+            <h1 class="p-title">ULTRASOUND JELLY JAR 5 KG</h1>
+            <div class="rating-box">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <span style="color: var(--text-light); font-size: 0.85rem;">(450+ Verified Reviews)</span>
+            </div>
+            
+            <div class="price-area">
+                <div class="discount-row">Special Discount -28% OFF</div>
+                <div class="p-price"><span>₹</span>649.00</div>
+                <div class="mrp-row">M.R.P.: ₹901.39</div>
+                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 10px;">Price inclusive of all taxes, GST 5%</p>
+            </div>
+
+            <div class="p-tabs">
+                <div class="tab-nav">
+                    <div class="tab-item active" onclick="switchTab(event, 'desc-pane')">Description</div>
+                    <div class="tab-item" onclick="switchTab(event, 'usage-pane')">How to Use</div>
+                </div>
+                <div id="desc-pane" class="tab-pane active">
+                    <p>Water-soluble gels (ECG/Ultrasound).</p>
+                </div>
+                <div id="usage-pane" class="tab-pane">
+                    <p>Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buy-box">
+            <div class="status-stock"><i class="fas fa-check-circle"></i> In Stock & Ready to Ship</div>
+            <div class="qty-row">
+                <p style="font-size: 0.85rem; margin-bottom: 8px; font-weight: 700;">Quantity</p>
+                <div class="qty-btn-box">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <span class="qty-val" id="qty-display">1</span>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <button class="btn btn-buy" onclick="buyNow()"><i class="fas fa-bolt"></i> Buy Now</button>
+                <button class="btn btn-wish" id="wish-btn" onclick="toggleWishlist()"><i class="far fa-heart"></i> Add to Wishlist</button>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: var(--text-light); display: flex; gap: 8px;">
+                    <i class="fas fa-truck" style="color: var(--primary);"></i> Express 1-Day Delivery in Hyderabad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Item added successfully!</div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Wilson Health Care</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;">India's leading provider of certified medical equipment and professional healthcare services.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: #475569; font-size: 0.8rem;">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const product = {
+            id: 19,
+            name: "ULTRASOUND JELLY JAR 5 KG",
+            price: 649.0,
+            image: "https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg",
+            category: "Diagnostics",
+            images: ["https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg", "data:image/jpeg;base64,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", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n0OJCGsV7Bu6GuXxsVjiHRpHE7BtBq5lj8T9rJfvwHxefnNqdM0RYQXs-FYWxW6bk_k&usqp=CAU"]
+        };
+
+        const thumbStrip = document.getElementById('thumb-strip');
+        if (product.images && product.images.length > 0) {
+            thumbStrip.innerHTML = product.images.map((img, i) => `
+                <div class="thumb ${i === 0 ? 'active' : ''}" onmouseover="changeMainImg(this, '${img}')">
+                    <img src="${img}" alt="Thumb ${i}">
+                </div>
+            `).join('');
+        }
+
+        function changeMainImg(el, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        let quantity = 1;
+        function updateQty(delta) {
+            quantity = Math.max(1, quantity + delta);
+            document.getElementById('qty-display').innerText = quantity;
+        }
+
+        function switchTab(evt, paneId) {
+            document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+            document.getElementById(paneId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        function updateBadge() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        function addToCart() {
+            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            if (!user) { alert("Please login on the home page first"); window.location.href = 'index.html'; return; }
+            
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(i => i.id === product.id);
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push({ ...product, quantity: quantity, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            showToast("Item added to cart!");
+            updateBadge();
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location.href = 'index.html#open-cart';
+        }
+
+        function toggleWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            const idx = wishlist.findIndex(id => id === product.id);
+            const btn = document.getElementById('wish-btn');
+            
+            if (idx > -1) {
+                wishlist.splice(idx, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+                showToast("Removed from wishlist");
+            } else {
+                wishlist.push(product.id);
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+                showToast("Added to wishlist!");
+            }
+            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+        }
+
+        function checkWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            if (wishlist.includes(product.id)) {
+                const btn = document.getElementById('wish-btn');
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+            }
+        }
+
+        // Init
+        updateBadge();
+        checkWishlist();
+    </script>
+</body>
+</html>

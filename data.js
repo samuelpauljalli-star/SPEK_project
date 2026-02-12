@@ -1,0 +1,2120 @@
+const products = [
+    {
+        id: 1,
+        gst: 5,
+        name: "SP02 PROBES",
+        category: "Diagnostics",
+        price: 1599.00,
+        oldPrice: 2220.83,
+        discount: "28% OFF",
+        image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw",
+        images: [
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw",
+            "https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg",
+            "https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+        ],
+        tag: "Fast Delivery",
+        desc: "Sensors and extensions used to measure oxygen saturation in the blood.",
+        usage: "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor."
+    },
+    {
+        id: 2,
+        gst: 18,
+        name: "SP02 EXTENSION CABLES",
+        category: "Diagnostics",
+        price: 1599.00,
+        oldPrice: 2103.95,
+        discount: "24% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2025/3/498285806/IS/TI/TM/52684900/spo2-sensor-probe.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2025/3/498285806/IS/TI/TM/52684900/spo2-sensor-probe.jpg",
+            "https://d1a93iq7322r9.cloudfront.net/images/detailed/22/spo2_sensor.jpg?t=1624264414",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/WR/LO/BY/29219632/spo2-extn-cable-ds-100-500x500.JPG"
+        ],
+        tag: "Must Have",
+        desc: "Sensors and extensions used to measure oxygen saturation in the blood.",
+        usage: "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor."
+    },
+    {
+        id: 3,
+        gst: 12,
+        name: "DISPOSABLE SP02 PROBES",
+        category: "Diagnostics",
+        price: 399.00,
+        oldPrice: 578.26,
+        discount: "31% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-500x500.webp",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-500x500.webp",
+            "https://5.imimg.com/data5/NH/OL/MY-8611832/spo2-sensor-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/4/501447903/HD/DR/RB/243343770/nellcor-spo2-probe-sensor.jpeg"
+        ],
+        tag: "Limited Stock",
+        desc: "Sensors and extensions used to measure oxygen saturation in the blood.",
+        usage: "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor."
+    },
+    {
+        id: 4,
+        gst: 18,
+        name: "MONITOR 5 LEAD ECG CABLES",
+        category: "Diagnostics",
+        price: 2099.00,
+        oldPrice: 2998.57,
+        discount: "30% OFF",
+        image: "https://tiimg.tistatic.com/fp/1/009/155/5-lead-ecg-cable-6-pin-single-notch-681.jpg",
+        images: [
+            "https://tiimg.tistatic.com/fp/1/009/155/5-lead-ecg-cable-6-pin-single-notch-681.jpg",
+            "https://m.media-amazon.com/images/I/519hoQr9NyL._AC_UF894,1000_QL80_.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2024/3/401945581/BW/IL/QI/189290577/product-jpeg.jpg"
+        ],
+        tag: "Quality Assured",
+        desc: "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
+        usage: "Connected to electrodes on the patient's chest and limbs to record heart activity."
+    },
+    {
+        id: 5,
+        gst: 5,
+        name: "MONITOR 3 LEAD ECG CABLES",
+        category: "Diagnostics",
+        price: 1999.00,
+        oldPrice: 2665.33,
+        discount: "25% OFF",
+        image: "https://www.sinokmed.com/cdn/shop/products/SG3115S_grande.jpg?v=1627435605",
+        images: [
+            "https://www.sinokmed.com/cdn/shop/products/SG3115S_grande.jpg?v=1627435605",
+            "https://avobus.com/ti/600/600/graphics/edan-ecg-integrated-cable-3-lead-snap-lead-wires-aha-a.JPG",
+            "https://avobus.com/ti/800/800/graphics/-a-24.jpg"
+        ],
+        tag: "Fast Delivery",
+        desc: "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
+        usage: "Connected to electrodes on the patient's chest and limbs to record heart activity."
+    },
+    {
+        id: 6,
+        gst: 12,
+        name: "10 LEADS ECG CABLES",
+        category: "Diagnostics",
+        price: 2299.00,
+        oldPrice: 2947.44,
+        discount: "22% OFF",
+        image: "https://m.media-amazon.com/images/I/51bx9Nr7EtL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51bx9Nr7EtL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzp_Tl8ACw4RB8REftUE-VHf27KhHHaxJGpDEbfbiwgSmuyulOvvg8o_LZ_NeDUcXaqJI&usqp=CAU",
+            "https://i.ebayimg.com/images/g/tLoAAOSwiIxaQxbE/s-l1200.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
+        usage: "Connected to electrodes on the patient's chest and limbs to record heart activity."
+    },
+    {
+        id: 7,
+        gst: 5,
+        name: "ECG ELECTRODES",
+        category: "Diagnostics",
+        price: 799.00,
+        oldPrice: 1109.72,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL50_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL50_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/3/UE/QD/HY/149720721/ecg-silicone-bulbs-electrodes-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/332892524/LA/FM/FG/125035684/img-1533-500x500.jpeg"
+        ],
+        tag: "Quality Assured",
+        desc: "Small conductive pads that attach to the skin.",
+        usage: "Placed on specific body parts to pick up electrical heart impulses."
+    },
+    {
+        id: 8,
+        gst: 18,
+        name: "NEON ECG ELECTRODE 3 WIRE",
+        category: "Diagnostics",
+        price: 299.00,
+        oldPrice: 398.67,
+        discount: "25% OFF",
+        image: "https://m.media-amazon.com/images/I/61QuLnampxL._SX522_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61QuLnampxL._SX522_.jpg",
+            "https://m.media-amazon.com/images/I/71vODD1exVL._SX522_.jpg",
+            "https://m.media-amazon.com/images/I/812JFN1lMCL._SX522_.jpg"
+        ],
+        tag: "Premium Choice",
+        desc: "Small conductive pads that attach to the skin.",
+        usage: "Placed on specific body parts to pick up electrical heart impulses."
+    },
+    {
+        id: 9,
+        gst: 12,
+        name: "DISPOSABLE ELECTRODES",
+        category: "Diagnostics",
+        price: 15.00,
+        oldPrice: 22.39,
+        discount: "33% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "Value Pack",
+        desc: "Small conductive pads that attach to the skin.",
+        usage: "Placed on specific body parts to pick up electrical heart impulses."
+    },
+    {
+        id: 10,
+        gst: 18,
+        name: "DISPOSABLE ELECTRODES",
+        category: "Diagnostics",
+        price: 15.00,
+        oldPrice: 22.39,
+        discount: "33% OFF",
+        image: "https://m.media-amazon.com/images/I/51mtodITGKL._SX522_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51mtodITGKL._SX522_.jpg",
+            "https://m.media-amazon.com/images/I/41KC12GjVhL._SX522_.jpg",
+            "https://m.media-amazon.com/images/I/61L7nwRQ7oL._SX522_.jpg"
+        ],
+        tag: "Premium",
+        desc: "Small conductive pads that attach to the skin.",
+        usage: "Placed on specific body parts to pick up electrical heart impulses."
+    },
+    {
+        id: 11,
+        gst: 5,
+        name: "ECG ALLIGATOR CLIPS",
+        category: "Surgical",
+        price: 399.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://www.davismedical.com/Images/Products/philips_989803129231.png",
+        images: [
+            "https://www.davismedical.com/Images/Products/philips_989803129231.png",
+            "https://www.cablesandsensors.eu/cdn/shop/products/AD-NA-100.jpg?v=1490382527",
+            "https://discountcardiology.com/images/P/RED%20CLIPS.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Metal or plastic connectors for ECG leads.",
+        usage: "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal."
+    },
+    {
+        id: 12,
+        gst: 12,
+        name: "ECG CLAMPS SET",
+        category: "Surgical",
+        price: 999.00,
+        oldPrice: 1387.50,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg",
+            "https://m.media-amazon.com/images/I/71OQGcTG1iL._AC_UF1000,1000_QL80_.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2021/12/GH/AE/PE/75026199/product-jpeg-500x500.jpg"
+        ],
+        tag: "Premium Quality",
+        desc: "Metal or plastic connectors for ECG leads.",
+        usage: "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal."
+    },
+    {
+        id: 13,
+        gst: 5,
+        name: "ECG PAPER -A4 SHEET (100 sheets)",
+        category: "Diagnostics",
+        price: 449.00,
+        oldPrice: 623.61,
+        discount: "28% OFF",
+        image: "https://sc04.alicdn.com/kf/H7a9a70b13097456281494e78cdc8daaaz.jpg",
+        images: [
+            "https://sc04.alicdn.com/kf/H7a9a70b13097456281494e78cdc8daaaz.jpg",
+            "https://imgcdn.mckesson.com/CumulusWeb/Images/Original_Image/952274_pdet.jpg",
+            "https://imgcdn.mckesson.com/CumulusWeb/Images/Item_Detail/952274_front.jpg"
+        ],
+        tag: "Hospital Grade",
+        desc: "Thermal-sensitive paper for ECG and NST machines.",
+        usage: "Loaded into the device printer to provide a permanent physical record of patient tests."
+    },
+    {
+        id: 14,
+        gst: 18,
+        name: "ECG PAPER-3 CHANNEL PAPERS (100 sheets)",
+        category: "Diagnostics",
+        price: 399.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/31eIATaT2QS.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/31eIATaT2QS.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/EL/AZ/EM/13335691/ecg-thermal-paper-roll-500x500.jpg",
+            "https://m.media-amazon.com/images/I/41RyzLbWIML._AC_UF1000,1000_QL80_.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Thermal-sensitive paper for ECG and NST machines.",
+        usage: "Loaded into the device printer to provide a permanent physical record of patient tests."
+    },
+    {
+        id: 15,
+        gst: 12,
+        name: "NST MACHINEPAPERS (100 sheets)",
+        category: "Diagnostics",
+        price: 449.00,
+        oldPrice: 623.61,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+
+        ],
+        tag: "Value Pack",
+        desc: "Thermal-sensitive paper for ECG and NST machines.",
+        usage: "Loaded into the device printer to provide a permanent physical record of patient tests."
+    },
+    {
+        id: 16,
+        gst: 18,
+        name: "ECG MACHINE JELLY BOTTLE 250 ml",
+        category: "Diagnostics",
+        price: 199.00,
+        oldPrice: 276.39,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2025/11/563862054/YU/JT/WW/47841137/otica-ultrasound-gel-for-usg-ecg-eeg-sonography-and-physio-250ml-blue-gel-pack-of-6.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2025/11/563862054/YU/JT/WW/47841137/otica-ultrasound-gel-for-usg-ecg-eeg-sonography-and-physio-250ml-blue-gel-pack-of-6.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/8/540414790/IF/VQ/IN/82858617/ecg-gel-250ml-500x500.jpeg",
+            "https://cpimg.tistatic.com/10541752/b/4/250ml-ECG-Gel..jpg"
+        ],
+        tag: "Bestseller",
+        desc: "Water-soluble gels (ECG/Ultrasound).",
+        usage: "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals."
+    },
+    {
+        id: 17,
+        gst: 5,
+        name: "ECG MACHINE JELLY JAR 5 KG",
+        category: "Diagnostics",
+        price: 649.00,
+        oldPrice: 901.39,
+        discount: "28% OFF",
+        image: "https://cpimg.tistatic.com/11421052/b/4/5L-ECG-Gel..webp",
+        images: [
+            "https://cpimg.tistatic.com/11421052/b/4/5L-ECG-Gel..webp",
+            "https://images-eu.ssl-images-amazon.com/images/I/710b-qaovgL._AC_UL495_SR435,495_.jpg",
+            "https://images-eu.ssl-images-amazon.com/images/I/61Ev3PZnJEL._AC_UL210_SR210,210_.jpg"
+        ],
+        tag: "Quick Ship",
+        desc: "Water-soluble gels (ECG/Ultrasound).",
+        usage: "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals."
+    },
+    {
+        id: 18,
+        gst: 12,
+        name: "ULTRASOUND JELLY BOTTLE 250 ml",
+        category: "Diagnostics",
+        price: 199.00,
+        oldPrice: 276.39,
+        discount: "28% OFF",
+        image: "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-006.webp",
+        images: [
+            "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-006.webp",
+            "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-004.webp",
+            "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-001.webp"
+        ],
+        tag: "Great Deal",
+        desc: "Water-soluble gels (ECG/Ultrasound).",
+        usage: "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals."
+    },
+    {
+        id: 19,
+        gst: 5,
+        name: "ULTRASOUND JELLY JAR 5 KG",
+        category: "Diagnostics",
+        price: 649.00,
+        oldPrice: 901.39,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg",
+            "data:image/jpeg;base64,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",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n0OJCGsV7Bu6GuXxsVjiHRpHE7BtBq5lj8T9rJfvwHxefnNqdM0RYQXs-FYWxW6bk_k&usqp=CAU"
+        ],
+        tag: "Recommended",
+        desc: "Water-soluble gels (ECG/Ultrasound).",
+        usage: "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals."
+    },
+    {
+        id: 20,
+        gst: 18,
+        name: "NIBP HOSING",
+        category: "First Aid",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://www.hemodiaz.com/wp-content/uploads/2025/02/72.png",
+        images: [
+            "https://www.hemodiaz.com/wp-content/uploads/2025/02/72.png",
+            "https://3.imimg.com/data3/QQ/IE/MY-4475804/nibp-hosepipe-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/6/314618030/QX/BB/IQ/107508882/nibp-hose-pipe-single-tube-500x500.jpg"
+        ],
+        tag: "Quick Ship",
+        desc: "Inflatable arm/thigh bands for non-invasive blood pressure.",
+        usage: "Wrapped around a limb and inflated by a monitor to measure pressure levels."
+    },
+    {
+        id: 21,
+        gst: 12,
+        name: "REUSABLE NIBP CUFFS (ADULT, EX LARGE, THIGH)",
+        category: "First Aid",
+        price: 599.00,
+        oldPrice: 831.94,
+        discount: "28% OFF",
+        image: "https://www.gehealthcare.com/-/jssmedia/gehc/us/images/products/clinical-accessories/non-invasive-blood-pressure-cuffs/product-switcher/product-switcher-dura-cuf-desktop.jpg?h=593&iar=0&w=1054&rev=-1&hash=127D499CAB0AFE7F57259824718A7C57",
+        images: [
+            "https://www.gehealthcare.com/-/jssmedia/gehc/us/images/products/clinical-accessories/non-invasive-blood-pressure-cuffs/product-switcher/product-switcher-dura-cuf-desktop.jpg?h=593&iar=0&w=1054&rev=-1&hash=127D499CAB0AFE7F57259824718A7C57",
+            "https://www.henryschein.com/Products/1215168_US_front_01_600x600.jpg",
+            "https://www.draeger.com/Media/Content/Products/Default/Draeger-Non-invasive-blood-pressure-cuffs-2-D-25285-2009.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Inflatable arm/thigh bands for non-invasive blood pressure.",
+        usage: "Wrapped around a limb and inflated by a monitor to measure pressure levels."
+    },
+    {
+        id: 22,
+        gst: 18,
+        name: "DISPOSABLE NIBPCUFFS (PEDIATRIC, NEONATAL, INFANT)",
+        category: "First Aid",
+        price: 349.00,
+        oldPrice: 484.72,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "Hot Deal",
+        desc: "Inflatable arm/thigh bands for non-invasive blood pressure.",
+        usage: "Wrapped around a limb and inflated by a monitor to measure pressure levels."
+    },
+    {
+        id: 23,
+        gst: 5,
+        name: "BD IBP CABLE",
+        category: "Diagnostics",
+        price: 2399.00,
+        oldPrice: 3331.94,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/12/370157222/DQ/KV/MJ/92146431/aami-compatible-ibp-adapter-cable-bd-connector.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/12/370157222/DQ/KV/MJ/92146431/aami-compatible-ibp-adapter-cable-bd-connector.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/7/328937374/KD/DZ/ZU/92146431/aami-compatible-ibp-adapter-cable-bd-connector-1000x1000.jpg"
+        ],
+        tag: "Premium",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 24,
+        gst: 12,
+        name: "MEDEX IBP CABLE",
+        category: "Diagnostics",
+        price: 2399.00,
+        oldPrice: 3331.94,
+        discount: "28% OFF",
+        image: "http://5.imimg.com/data5/SELLER/Default/2022/12/YH/CJ/TN/972966/ibp-cable-1000x1000.jpg",
+        images: [
+            "http://5.imimg.com/data5/SELLER/Default/2022/12/YH/CJ/TN/972966/ibp-cable-1000x1000.jpg",
+            "http://5.imimg.com/data5/SELLER/Default/2022/12/WY/LZ/ZZ/972966/ibp-cable-1000x1000.jpg",
+            "http://5.imimg.com/data5/SELLER/Default/2022/12/CB/HK/LU/972966/ibp-cable-1000x1000.jpg"
+        ],
+        tag: "Recommended",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 25,
+        gst: 5,
+        name: "EDWARDS IBP CABLE",
+        category: "Diagnostics",
+        price: 2399.00,
+        oldPrice: 3331.94,
+        discount: "28% OFF",
+        image: "http://5.imimg.com/data5/SELLER/Default/2024/5/421846623/WG/KB/UU/37981635/transducer-ibp-cable-1000x1000.jpg",
+        images: [
+            "http://5.imimg.com/data5/SELLER/Default/2024/5/421846623/WG/KB/UU/37981635/transducer-ibp-cable-1000x1000.jpg"
+        ],
+        tag: "Recommended",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 26,
+        gst: 18,
+        name: "TEMPERATURE PROBES",
+        category: "Diagnostics",
+        price: 2299.00,
+        oldPrice: 3193.06,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/11/361395803/FS/TR/XX/8847843/skin-temperature-probes.jpg",
+        images: [
+            " https://5.imimg.com/data5/SELLER/Default/2023/11/361395803/FS/TR/XX/8847843/skin-temperature-probes.jpg",
+            " https://5.imimg.com/data5/SELLER/Default/2021/4/WC/SR/JG/22844938/drager-adult-skin-temperature-probe-500x500.jpg",
+            " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJRtzaNkCiFdpth2G6RmDVQm9ezXXP54ZK3c3Alf8N1Q3d21A7UfP8sZAPh1std3tdKk&usqp=CAU"
+        ],
+        tag: "New Arrival",
+        desc: "",
+        usage: ""
+    },
+    {
+        id: 27,
+        gst: 12,
+        name: "EDWARDS SINGLE LINE",
+        category: "Surgical",
+        price: 849.00,
+        oldPrice: 1179.17,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "High Quality",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 28,
+        gst: 18,
+        name: "MEDEX SINGLE LINE",
+        category: "Surgical",
+        price: 849.00,
+        oldPrice: 1179.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51sXY6ughBL._AC_UF350,350_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51sXY6ughBL._AC_UF350,350_QL80_.jpg",
+            "https://cpimg.tistatic.com/06074733/b/4/Hospital-Disposable-IBP-Transducer-Kit.jpg"
+        ],
+        tag: "Limited Stock",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 29,
+        gst: 5,
+        name: "UTAH SINGLE LINE",
+        category: "Surgical",
+        price: 849.00,
+        oldPrice: 1179.17,
+        discount: "28% OFF",
+        image: "https://img.medicalexpo.com/images_me/photo-g/300302-20214542.jpg",
+        images: [
+            "https://img.medicalexpo.com/images_me/photo-g/300302-20214542.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2025/4/504070324/YB/WZ/MS/34934389/product-jpeg.jpeg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVHXiAolHbFKKMi7V2TYW5ohzMu8gFs9PipF4pFQ8KgZdbyOCwPughWI3pPT72KuCjF4U&usqp=CAU"
+        ],
+        tag: "Limited Stock",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 30,
+        gst: 12,
+        name: "B.D SINGLE LINE",
+        category: "Surgical",
+        price: 849.00,
+        oldPrice: 1179.17,
+        discount: "28% OFF",
+        image: "https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42",
+        images: [
+            "https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42"
+        ],
+        tag: "Professional Grade",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 31,
+        gst: 5,
+        name: "EDWARDS DOUBLE LINE",
+        category: "Surgical",
+        price: 1399.00,
+        oldPrice: 1943.06,
+        discount: "28% OFF",
+        image: "https://respbuy.com/wp-content/uploads/2022/10/RespBuy-Edwards-Connector-Compatible-IBP-Disposable-Transducer.webp",
+        images: [
+            "https://respbuy.com/wp-content/uploads/2022/10/RespBuy-Edwards-Connector-Compatible-IBP-Disposable-Transducer.webp",
+            "https://respbuy.com/wp-content/uploads/2022/10/Edwards-IBP-Connector.jpg.webp",
+            "https://respbuy.com/wp-content/uploads/2022/10/RespBuy-Edwards-Connector-Compatible-IBP-Disposable-Transducer-1.webp"
+        ],
+        tag: "Professional Grade",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 32,
+        gst: 18,
+        name: "MEDEX DOUBLE LINE",
+        category: "Surgical",
+        price: 1399.00,
+        oldPrice: 1943.06,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/1/379751556/QH/UM/ZE/210553352/dr-surgical-single-pressure-transducer-disposable-500x500.png",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/1/379751556/QH/UM/ZE/210553352/dr-surgical-single-pressure-transducer-disposable-500x500.png",
+            "https://5.imimg.com/data5/SELLER/Default/2025/10/554395466/QX/KZ/TM/93907856/utah-connector-disposable-blood-pressure-transducer-kits-pack-of-2-1000x1000.png"
+        ],
+        tag: "Premium",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 33,
+        gst: 12,
+        name: "IBP DPT BRACKET & DPT HOLDER",
+        category: "Surgical",
+        price: 1199.00,
+        oldPrice: 1665.28,
+        discount: "28% OFF",
+        image: "https://tiimg.tistatic.com/fp/6/008/680/disposable-pressure-transducer-kit-105.jpg",
+        images: [
+            "https://tiimg.tistatic.com/fp/6/008/680/disposable-pressure-transducer-kit-105.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/1/484838089/LY/RP/IF/37094035/monitor-pressure-monitoring-transducer-kit-single-double-lumen.png",
+            "https://ace-medical.com/wp-content/uploads/2024/05/product_autotransducer003.jpg"
+        ],
+        tag: "Value Pack",
+        desc: "Invasive pressure cables and disposable transducer lines.",
+        usage: "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring."
+    },
+    {
+        id: 34,
+        gst: 18,
+        name: "ETCO2 MODULE",
+        category: "Diagnostics",
+        price: 30000.00,
+        oldPrice: 41666.67,
+        discount: "28% OFF",
+        image: "https://cpimg.tistatic.com/10257966/b/4/Contec-ETCO2-Mainstream-Module-For-Contec-Patient-Monitors..jpg",
+        images: [
+            "https://cpimg.tistatic.com/10257966/b/4/Contec-ETCO2-Mainstream-Module-For-Contec-Patient-Monitors..jpg",
+            "https://i.ebayimg.com/images/g/pLsAAOSwqoRl5YUP/s-l1600.jpg",
+            "https://i.ebayimg.com/images/g/l3gAAOSwYYBkESJt/s-l1200.jpg"
+        ],
+        tag: "Bulk Available",
+        desc: "Modules and sampling lines for measuring exhaled CO2.",
+        usage: "Attached to breathing circuits to monitor how well a patient is breathing/ventilating."
+    },
+    {
+        id: 35,
+        gst: 5,
+        name: "ETCO2 WATER TRAPS",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2025/9/547829787/MA/EA/OG/50826304/ge-dfend-pro-water-trap.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2025/9/547829787/MA/EA/OG/50826304/ge-dfend-pro-water-trap.jpg",
+            "https://i.ebayimg.com/images/g/4WoAAOSw9hdaJVQP/s-l1200.jpg",
+            "https://www.medline.com/media/catalog/sku/CRM/CRMM1200227H_PRI01.JPG"
+        ],
+        tag: "Reliable",
+        desc: "Modules and sampling lines for measuring exhaled CO2.",
+        usage: "Attached to breathing circuits to monitor how well a patient is breathing/ventilating."
+    },
+    {
+        id: 36,
+        gst: 12,
+        name: "ETCO2 SAMPLING LINE",
+        category: "Surgical",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://cdn.tri-anim.com/ths/products/group006030_original_1200Wx1200H_8978551963678",
+        images: [
+            "https://cdn.tri-anim.com/ths/products/group006030_original_1200Wx1200H_8978551963678",
+            "https://cdn.boundtree.com/btm/products/515Wx515H_original_2722-5601A_9054895276062.jpg",
+            "https://cdn.tri-anim.com/ths/products/301-5707F-SE_original_515Wx515H_8947688013854"
+        ],
+        tag: "New Arrival",
+        desc: "Modules and sampling lines for measuring exhaled CO2.",
+        usage: "Attached to breathing circuits to monitor how well a patient is breathing/ventilating."
+    },
+    {
+        id: 37,
+        gst: 5,
+        name: "ETCO2 ADAPTOR",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "Premium Quality",
+        desc: "Modules and sampling lines for measuring exhaled CO2.",
+        usage: "Attached to breathing circuits to monitor how well a patient is breathing/ventilating."
+    },
+    {
+        id: 38,
+        gst: 18,
+        name: "IBP DOUBLE ADAPTOR",
+        category: "Surgical",
+        price: 3499.00,
+        oldPrice: 4859.72,
+        discount: "28% OFF",
+        image: "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KS-HP-HP-2.jpg",
+        images: [
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KS-HP-HP-2.jpg",
+            "data:image/jpeg;base64,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",
+            "https://www.rhinotradellc.com/wp-content/uploads/imported/5/Lot-of-24-Philips-Dual-IBP-Adapter-989803199741-235268471205-5.jpg"
+        ],
+        tag: "Hot Deal",
+        desc: "A connector for managing two invasive pressure readings.",
+        usage: "Links multiple transducer lines to a single monitor port."
+    },
+    {
+        id: 39,
+        gst: 12,
+        name: "OXYGEN HOOD",
+        category: "First Aid",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg",
+            "https://tiimg.tistatic.com/fp/1/004/149/infant-oxygen-hood-374.jpg",
+            "data:image/jpeg;base64,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"
+        ],
+        tag: "Reliable",
+        desc: "A clear dome used for infants.",
+        usage: "Placed over a baby's head to deliver a high-oxygen environment without a mask."
+    },
+    {
+        id: 40,
+        gst: 18,
+        name: "FACE MASKS (SIZE=1-5)",
+        category: "First Aid",
+        price: 599.00,
+        oldPrice: 831.94,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2020/9/XL/XX/FW/27724764/anesthesia-mask-500x500-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2020/9/XL/XX/FW/27724764/anesthesia-mask-500x500-500x500.jpg",
+            "https://image.made-in-china.com/202f0j00NLoquJyElPzm/Gas-Valve-Horizontal-Medical-Grade-PVC-Material-Anesthesia-Face-Mask-with-Different-Sizes.webp",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgK3K9-lyDkhWcX4kBIvQU65z8rGBnC3eiCpkbpsm6UYWVf0ODbFOb5yVkHg7qhVCXIz8&usqp=CAU"
+        ],
+        tag: "Best Seller",
+        desc: "Face, Anaesthesia, and Nasal masks in various sizes.",
+        usage: "Held over the face to deliver oxygen or anesthetic gases."
+    },
+    {
+        id: 41,
+        gst: 5,
+        name: "DISPOSABLEADULT HUMIDIFIER CHAMBER",
+        category: "Surgical",
+        price: 999.00,
+        oldPrice: 1387.50,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2021/5/PT/VD/PN/104083645/product-niv-face-masks-04.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2021/5/PT/VD/PN/104083645/product-niv-face-masks-04.jpg",
+            "https://au.intersurgical.com/content/images/dynamic/76262/1547685004/Veraseal_2_nonvented_for_use_with_dual_limbs_iso_web.jpg",
+            "https://5.imimg.com/data5/OI/CU/FD/SELLER-24454082/pvc-nasal-face-mask.jpg"
+        ],
+        tag: "Quality Assured",
+        desc: "Face, Anaesthesia, and Nasal masks in various sizes.",
+        usage: "Held over the face to deliver oxygen or anesthetic gases."
+    },
+    {
+        id: 42,
+        gst: 12,
+        name: "REUSABLE ADULT HUMIDIFIER CHAMBER",
+        category: "Surgical",
+        price: 3499.00,
+        oldPrice: 4859.72,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "Bestseller",
+        desc: "Reusable and disposable water containers for ventilation.",
+        usage: "Heats and adds moisture to air from a ventilator to keep the airway from drying."
+    },
+    {
+        id: 43,
+        gst: 5,
+        name: "REUSABLE NEONATE HUMIDIFIER CHAMBER",
+        category: "Surgical",
+        price: 4999.00,
+        oldPrice: 6943.06,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/9/341337144/UZ/XN/AG/316820/hc200-humidification-chamber.png",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/9/341337144/UZ/XN/AG/316820/hc200-humidification-chamber.png",
+            "https://5.imimg.com/data5/SELLER/Default/2023/1/VA/DQ/RJ/162559849/humidifier-chamber-250x250.jpg"
+        ],
+        tag: "Most Popular",
+        desc: "Reusable and disposable water containers for ventilation.",
+        usage: "Heats and adds moisture to air from a ventilator to keep the airway from drying."
+    },
+    {
+        id: 44,
+        gst: 18,
+        name: "DISPOSABLE NEONATE HUMIDIFIER CHAMBER",
+        category: "Surgical",
+        price: 999.00,
+        oldPrice: 1387.50,
+        discount: "28% OFF",
+        image: "https://2.wlimg.com/product_images/bc-full/2021/12/9384894/auto-feed-humidification-chamber-1639555331-6052415.jpg",
+        images: [
+            "https://2.wlimg.com/product_images/bc-full/2021/12/9384894/auto-feed-humidification-chamber-1639555331-6052415.jpg",
+            "https://tiimg.tistatic.com/fp/1/004/482/disposable-humidification-chamber-002.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2025/10/553178909/OX/GZ/UB/119286081/product-jpeg.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Reusable and disposable water containers for ventilation.",
+        usage: "Heats and adds moisture to air from a ventilator to keep the airway from drying."
+    },
+    {
+        id: 45,
+        gst: 12,
+        name: "ANAESTHESIA MASKS (SIZE=1-5)",
+        category: "Surgical",
+        price: 599.00,
+        oldPrice: 831.94,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/71VInXDnHjL._AC_UF350,350_QL50_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/71VInXDnHjL._AC_UF350,350_QL50_.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3bVZtye3r9dFDximboR2ofSZ8axCCHaSzz1-bEc_2y7IjjKFJIoMzUVdxQugwQMfI2nI&usqp=CAU",
+            "https://cpimg.tistatic.com/09479347/b/4/Anatomical-Face-Mask.jpg"
+        ],
+        tag: "Award Winner",
+        desc: "Laryngeal Mask Airway; an alternative to intubation.",
+        usage: "Inserted into the throat to maintain an open airway during surgery."
+    },
+    {
+        id: 46,
+        gst: 18,
+        name: "LMA",
+        category: "Surgical",
+        price: 899.00,
+        oldPrice: 1248.61,
+        discount: "28% OFF",
+        image: "",
+        images: [
+            "",
+            "",
+            ""
+        ],
+        tag: "Safety First",
+        desc: "Laryngeal Mask Airway; an alternative to intubation.",
+        usage: "Inserted into the throat to maintain an open airway during surgery."
+    },
+    {
+        id: 47,
+        gst: 5,
+        name: "DISPOSABLE BAIN CIRCUIT",
+        category: "Surgical",
+        price: 799.00,
+        oldPrice: 1109.72,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/71-Ts9G+FfL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/71-Ts9G+FfL.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/9/454877960/NB/WU/JO/56186/bains-circuit-500x500.jpg",
+            "https://m.media-amazon.com/images/I/614hh3VSCsL._AC_UF1000,1000_QL80_.jpg"
+        ],
+        tag: "Best Value",
+        desc: "A specialized tube system for anesthesia.",
+        usage: "Delivers fresh gas while removing exhaled carbon dioxide."
+    },
+    {
+        id: 48,
+        gst: 12,
+        name: "DISPOSABLE VENTILATOR CIRCUIT",
+        category: "Surgical",
+        price: 1599.00,
+        oldPrice: 2220.83,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/IOS/Default/2023/4/299115161/NQ/MQ/JN/186121235/product-jpeg-250x250.png",
+        images: [
+            "https://5.imimg.com/data5/IOS/Default/2023/4/299115161/NQ/MQ/JN/186121235/product-jpeg-250x250.png",
+            "https://5.imimg.com/data5/IOS/Default/2023/3/294869503/TG/ZY/EN/186121235/product-jpeg-250x250.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHu0T7bQ9YQe5-eb0ENr6A57LyUOvfnt1TYSK1uk8AINDYHzsEtBYC3RO-XsO2bmOvQk&usqp=CAU"
+        ],
+        tag: "Top Pick",
+        desc: "Corrugated tubing sets for breathing machines.",
+        usage: "Acts as the breathing tube between the patient and the ventilator."
+    },
+    {
+        id: 49,
+        gst: 5,
+        name: "DISPOSABLE VENTILATOR CIRCUIT WITH 2 WATER TRAP",
+        category: "Surgical",
+        price: 699.00,
+        oldPrice: 970.83,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/8/338358272/LL/SF/PF/51458038/double-water-trap-breathing-circuits.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/338358272/LL/SF/PF/51458038/double-water-trap-breathing-circuits.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/338240375/YN/CR/RT/51458038/double-water-trap-breathing-circuits-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/338358324/UE/TY/IC/51458038/double-water-trap-breathing-circuits-1000x1000.jpg"
+        ],
+        tag: "Hospital Grade",
+        desc: "Corrugated tubing sets for breathing machines.",
+        usage: "Acts as the breathing tube between the patient and the ventilator."
+    },
+    {
+        id: 50,
+        gst: 18,
+        name: "REUSABLE VENTILATOR CIRCUIT",
+        category: "Surgical",
+        price: 4499.00,
+        oldPrice: 6248.61,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/AJ/BA/MY-1650889/silicon-reusable-ventilator-circuit-neonatal-250x250.jpg",
+        images: [
+            "https://5.imimg.com/data5/AJ/BA/MY-1650889/silicon-reusable-ventilator-circuit-neonatal-250x250.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/9/TV/GR/UG/100949582/ventilator-circuits-500x500.jpg",
+            "https://5.imimg.com/data5/JH/LE/AY/SELLER-1801632/addd413e-7311-49e4-bf9a-00fbeca2a52c.JPG"
+        ],
+        tag: "New Arrival",
+        desc: "Corrugated tubing sets for breathing machines.",
+        usage: "Acts as the breathing tube between the patient and the ventilator."
+    },
+    {
+        id: 51,
+        gst: 12,
+        name: "TEST LUNG",
+        category: "Surgical",
+        price: 1799.00,
+        oldPrice: 2498.61,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41J5SBX-tXL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41J5SBX-tXL.jpg"
+        ],
+        tag: "Award Winner",
+        desc: "Simulated lungs for equipment testing.",
+        usage: "Attached to a ventilator to check its function before using it on a patient."
+    },
+    {
+        id: 52,
+        gst: 18,
+        name: "NEONATE TEST LUNG",
+        category: "Surgical",
+        price: 1199.00,
+        oldPrice: 1665.28,
+        discount: "28% OFF",
+        image: "https://www.medline.com/media/catalog/sku/BIV/BIV1021_PRI01.JPG",
+        images: [
+            "https://www.medline.com/media/catalog/sku/BIV/BIV1021_PRI01.JPG",
+            "https://www.medline.com/media/catalog/sku/BIV/300x300/BIV1020_PRI01.JPG"
+        ],
+        tag: "Limited Stock",
+        desc: "Simulated lungs for equipment testing.",
+        usage: "Attached to a ventilator to check its function before using it on a patient."
+    },
+    {
+        id: 53,
+        gst: 5,
+        name: "AMBU BAG",
+        category: "Mobility",
+        price: 999.00,
+        oldPrice: 1387.50,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/1/374194319/GU/UJ/DM/6223646/ambu-bag-250x250.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/1/374194319/GU/UJ/DM/6223646/ambu-bag-250x250.jpg",
+            "https://s.alicdn.com/@sc04/kf/H96ab86d8a0944719b98f514c85e3ac9eY.png",
+            "https://image.made-in-china.com/202f0j00HWDqAaMlbEum/Medical-Portable-Ambu-Bag-PVC-Manual-Resuscitator-for-Pulmonary-Resuscitation.webp"
+        ],
+        tag: "Most Popular",
+        desc: "Manual resuscitator (AMBU) and reservoir bags.",
+        usage: "Squeezed by hand to manually pump air into a patient's lungs."
+    },
+    {
+        id: 54,
+        gst: 12,
+        name: "BREATHING BAGS",
+        category: "Mobility",
+        price: 549.00,
+        oldPrice: 762.50,
+        discount: "28% OFF",
+        image: "https://image.made-in-china.com/2f0j00DyIcnTWaZVos/Orcl-Factory-Reusable-3L-2L-1L-Latex-Free-Anesthesia-Oxygen-Reservoir-Medical-Breathing-Bag.webp",
+        images: [
+            "https://image.made-in-china.com/2f0j00DyIcnTWaZVos/Orcl-Factory-Reusable-3L-2L-1L-Latex-Free-Anesthesia-Oxygen-Reservoir-Medical-Breathing-Bag.webp",
+            "data:image/jpeg;base64,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",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROlKXOChD3RSjZOkmH1LvlO81ZFPpdNdOBFSaFzt-Cb86BlKkAuGysPMq6D2_iB78JaQI&usqp=CAU"
+        ],
+        tag: "Top Rated",
+        desc: "Manual resuscitator (AMBU) and reservoir bags.",
+        usage: "Squeezed by hand to manually pump air into a patient's lungs."
+    },
+    {
+        id: 55,
+        gst: 5,
+        name: "BREATHING BAGS",
+        category: "Diagnostics",
+        price: 2499.00,
+        oldPrice: 3470.83,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SA/WD/MY-3840630/vein-finder-torch-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/SA/WD/MY-3840630/vein-finder-torch-500x500.jpg",
+            "https://5.imimg.com/data5/UX/OA/MY-3840630/v_10_3-1000x1000.jpg",
+            "https://5.imimg.com/data5/KQ/FK/MY-3840630/v_10_2-1000x1000.jpg"
+        ],
+        tag: "Trusted Brand",
+        desc: "Vein Scan, U Type Scan, and Thermo Scan.",
+        usage: "Vein Scan: Projects a map of veins on skin to help with IV starts."
+    },
+    {
+        id: 56,
+        gst: 18,
+        name: "U TYPE SCAN",
+        category: "Diagnostics",
+        price: 2499.00,
+        oldPrice: 3470.83,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6789c004-a26e-42a0-bed2-de7d1b0483dd.__CR0,0,550,550_PT0_SX300_V1___.jpg",
+        images: [
+            "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6789c004-a26e-42a0-bed2-de7d1b0483dd.__CR0,0,550,550_PT0_SX300_V1___.jpg",
+            "data:image/jpeg;base64,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",
+            "https://5.imimg.com/data5/DY/SO/MY-5714619/vein-finder-500x500.jpg"
+        ],
+        tag: "Staff Pick",
+        desc: "Vein Scan, U Type Scan, and Thermo Scan.",
+        usage: "Vein Scan: Projects a map of veins on skin to help with IV starts."
+    },
+    {
+        id: 57,
+        gst: 12,
+        name: "THERMO SCAN",
+        category: "Diagnostics",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51QFbckqsdL._AC_UF350,350_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51QFbckqsdL._AC_UF350,350_QL80_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/1/481018399/GT/AK/TA/41693358/digital-clinical-thermometer-500x500.jpeg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/3/401885295/IP/YV/FJ/12739846/infrared-forehead-thermometer-500x500.jpg"
+        ],
+        tag: "Award Winner",
+        desc: "Vein Scan, U Type Scan, and Thermo Scan.",
+        usage: "Vein Scan: Projects a map of veins on skin to help with IV starts."
+    },
+    {
+        id: 58,
+        gst: 18,
+        name: "LARYNGOSCOPE",
+        category: "Surgical",
+        price: 5999.00,
+        oldPrice: 8331.94,
+        discount: "28% OFF",
+        image: "https://2.imimg.com/data2/WT/YA/NSD-991925/images-laryngoscope_set_spares.jpg",
+        images: [
+            "https://2.imimg.com/data2/WT/YA/NSD-991925/images-laryngoscope_set_spares.jpg",
+            "https://5.imimg.com/data5/VV/FT/MY-13019883/laryngoscope-250x250.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8Vqb77ODLt3DipGBw5TfOcrGwBfXeCqXnfvKJVETDhLQ28M5-p1D0AOqM3xJtkIo8wc&usqp=CAU"
+        ],
+        tag: "Premium Choice",
+        desc: "Handles, blades, and LED bulbs for airway viewing.",
+        usage: "Inserted into the throat to move the tongue and view the vocal cords."
+    },
+    {
+        id: 59,
+        gst: 5,
+        name: "MCCOY LARYNGOSCOPE (SIZE=2-6)",
+        category: "Surgical",
+        price: 2999.00,
+        oldPrice: 4165.28,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/513dpyW0hpL._AC_UF350,350_QL50_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/513dpyW0hpL._AC_UF350,350_QL50_.jpg",
+            "https://m.media-amazon.com/images/I/61QAiDNs7QL.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/2/490503189/DV/BZ/BQ/57333920/laryngoscope-adult-set-of-3-500x500.jpg"
+        ],
+        tag: "Bestseller",
+        desc: "Handles, blades, and LED bulbs for airway viewing.",
+        usage: "Inserted into the throat to move the tongue and view the vocal cords."
+    },
+    {
+        id: 60,
+        gst: 12,
+        name: "LARYNGOSCOPE BULBS",
+        category: "Surgical",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://img1.exportersindia.com/product_images/bc-small/dir_143/4267571/laryngoscope-bulb-2874098.jpg",
+        images: [
+            "https://img1.exportersindia.com/product_images/bc-small/dir_143/4267571/laryngoscope-bulb-2874098.jpg",
+            "data:image/jpeg;base64,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",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeAd2Pz6WKHNBUG9CYbw0sfW6xPHZSJ1sxSDUlpHSSd8usZIW6Coh6rmu6mhXkP9wED9A&usqp=CAU"
+        ],
+        tag: "Great Deal",
+        desc: "Handles, blades, and LED bulbs for airway viewing.",
+        usage: "Inserted into the throat to move the tongue and view the vocal cords."
+    },
+    {
+        id: 61,
+        gst: 5,
+        name: "FINGER CLIP",
+        category: "Diagnostics",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://shop.medtechlife.com/cdn/shop/products/medtech-pulse-oximeter-og-01-657903_1024x1024.webp?v=1663937941",
+        images: [
+            "https://shop.medtechlife.com/cdn/shop/products/medtech-pulse-oximeter-og-01-657903_1024x1024.webp?v=1663937941",
+            "data:image/jpeg;base64,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",
+            "https://5.imimg.com/data5/SELLER/Default/2025/8/540176971/MX/FX/ES/16727274/pulse-oximeters.jpg"
+        ],
+        tag: "Quality Assured",
+        desc: "Finger Clips and Needle Destroyers.",
+        usage: "Needle Destroyer: Electrically melts needles to prevent accidental stabs."
+    },
+    {
+        id: 62,
+        gst: 18,
+        name: "NEEDLE DESTROYER",
+        category: "Surgical",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg",
+        images: [
+            "https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg",
+            "data:image/jpeg;base64,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",
+            "https://5.imimg.com/data5/SELLER/Default/2022/4/FO/MM/OC/22243072/electric-needle-syringe-destroyer.jpg"
+        ],
+        tag: "Trusted Brand",
+        desc: "Finger Clips and Needle Destroyers.",
+        usage: "Needle Destroyer: Electrically melts needles to prevent accidental stabs."
+    },
+    {
+        id: 63,
+        gst: 12,
+        name: "OXYGEN MASKS",
+        category: "First Aid",
+        price: 99.00,
+        oldPrice: 137.50,
+        discount: "28% OFF",
+        image: "https://images.meesho.com/images/products/435187702/lkfgp_512.jpg",
+        images: [
+            "https://images.meesho.com/images/products/435187702/lkfgp_512.jpg",
+            "https://5.imimg.com/data5/DT/OD/CY/SELLER-16567566/oxygen-mask-500x500.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhDlzYqMirIkrcq8N42n41oX-jRni6vd0SzUES7xjHKUGA1rf5um2L2QXZCIP98NnMJgU&usqp=CAU"
+        ],
+        tag: "Hot Deal",
+        desc: "Disposable masks for therapy.",
+        usage: "Delivers oxygen or misted medication (nebulization) directly to the patient."
+    },
+    {
+        id: 64,
+        gst: 18,
+        name: "NEBULIZER MASKS",
+        category: "First Aid",
+        price: 109.00,
+        oldPrice: 151.39,
+        discount: "28% OFF",
+        image: "https://rukminim2.flixcart.com/image/480/640/xif0q/nebulizer/c/i/f/child-nebulizer-mask-with-air-tube-medicine-chamber-nebulizer-original-imahg3h58awcz59b.jpeg?q=90",
+        images: [
+            "https://rukminim2.flixcart.com/image/480/640/xif0q/nebulizer/c/i/f/child-nebulizer-mask-with-air-tube-medicine-chamber-nebulizer-original-imahg3h58awcz59b.jpeg?q=90",
+            "https://m.media-amazon.com/images/I/51QnriUbO2L.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/3/498340531/KQ/XV/QW/52684900/nebulizer-chamber-500x500.jpg"
+        ],
+        tag: "High Quality",
+        desc: "Disposable masks for therapy.",
+        usage: "Delivers oxygen or misted medication (nebulization) directly to the patient."
+    },
+    {
+        id: 65,
+        gst: 5,
+        name: "HME FILTER",
+        category: "First Aid",
+        price: 99.00,
+        oldPrice: 137.50,
+        discount: "28% OFF",
+        image: "https://cruzine.in/cdn/shop/products/H.M.EFilter_0000_h2-f1000x1000_700x.jpg?v=1682058242",
+        images: [
+            "https://cruzine.in/cdn/shop/products/H.M.EFilter_0000_h2-f1000x1000_700x.jpg?v=1682058242",
+            "data:image/jpeg;base64,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",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrs8qrWn9bfdnwFhFk78td8rxeueshqKSXaqOgfvkZKJC2FSUlVjCKBoTqFcdWuv8bY-0&usqp=CAU"
+        ],
+        tag: "Customer Favorite",
+        desc: "HME, Bacterial, and Spirolog filters.",
+        usage: "Placed in breathing tubes to block germs or trap moisture."
+    },
+    {
+        id: 66,
+        gst: 12,
+        name: "BACTERIAL FILTER",
+        category: "First Aid",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41vPlHVOZjL._AC_UF1000,1000_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41vPlHVOZjL._AC_UF1000,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/210A2jt4rkL.jpg"
+        ],
+        tag: "Customer Favorite",
+        desc: "HME, Bacterial, and Spirolog filters.",
+        usage: "Placed in breathing tubes to block germs or trap moisture."
+    },
+    {
+        id: 67,
+        gst: 5,
+        name: "SPIROLOGA+H",
+        category: "Diagnostics",
+        price: 12999.00,
+        oldPrice: 18054.17,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/CC/FS/OG/SELLER-8834241/disposable-ventilator-flow-sensor-500x500.png",
+        images: [
+            "https://5.imimg.com/data5/CC/FS/OG/SELLER-8834241/disposable-ventilator-flow-sensor-500x500.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-zEIi2Iam05FadQcOre47oJiS6yDlpVo5CfPha9VJIRLLWknoCWaRVaQfB9akoZA7U6s&usqp=CAU",
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/BC/PD/LZ/2838750/honeywell-e07-00-001-envitec-spiroquant-h-flow-sensor.jpg"
+        ],
+        tag: "Trending",
+        desc: "HME, Bacterial, and Spirolog filters.",
+        usage: "Placed in breathing tubes to block germs or trap moisture."
+    },
+    {
+        id: 68,
+        gst: 18,
+        name: "SPIROMETER THREE BALL",
+        category: "Diagnostics",
+        price: 199.00,
+        oldPrice: 276.39,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/61RMZTb+sRL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61RMZTb+sRL.jpg",
+            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhIQEBIVEBAVFhUVFRAVDxAVEBISFRYWFhUWFRUYHSggGBolGxUVIjEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGy0lHiYrLSsrLS0rKy0tLS8tLS0tKys3Ly8rLS0tNy0tKy0tLS0tLS0tLS0uKy0tLystLSsrLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAwQBAgUGBwj/xABBEAACAQIDBAcFBQUHBQAAAAAAAQIDEQQSIQUxQVEiMmFxgZGhBhNyscFCstHh8AcjYoKSFBczUlPC8RU0oqPS/8QAGgEBAQEAAwEAAAAAAAAAAAAAAAECAwQGBf/EACkRAQEAAgEDBAAFBQAAAAAAAAABAhEDBCExBRJBUUJhcZGxBhMiIzL/2gAMAwEAAhEDEQA/APuIAAAAAAYbAyDRzHvANwaqZnMBkGLmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyGrOxKypiWBy8XtbRunrFXvUd8itvypazfceU/vCfvJ/uXDDQWtarTrwlKXDLCMZdHtdrci9tONV04RoaTzZdIq9lmXLsL+Ep+5pJ15ZXxcXa/wDKt77kc0mM+No4+zP2l0qrSeHqpPRTjOjKF+XSlF34vTTidLB/tCwNSTgqsoyW9So1Ul3yUWl5lmtg6U43lkaf+pThZ96kkc6t7I4Oaa9zTSk1JqnJ01KSvaTUXZvV624vmP8AXfjRuPQ4b2iw03lhiKMpLfFVoZl3xvdHRjXPn+K9h6MtVKouio2fuakcsUox1cVLRJLretmcSv8As8rwv/ZMYsPolljSq0tVxzQm0m+NkJhhfxL2fXlWNlUPkOz9kbapSV8a6lNb1GrTqTfYvfx077nRjt7alJ2qUpOK1zTwfvM3Ynhars92uXnpzXh+rKun09TM5j5r/eFOErVaNPc3/wBxKlNtK9slaCSe7fLffkzq0vbqnaTqUa9KMW055aU4dF2bvCb6N07O2tnyZm8WX0ae2uLnl6Ptng5K7rqmtHerTq0lZq6d6kUrNceJ1sHtWlVV6VWnUXOFSEvkzFxs8xHTBFGoSJkGQAAAAAAAAAAAAAAAAAAZUxKLZXxCA5dKkrvSzvvWj11KmIwEG5TteS4yzT0XBJvTwJMZi1TvpeT3Lh4m9Krmjm/zRT8eJqb8suVsenLK6jjGTblbTpJXdldv5JEksG3F1qkqymr/ALuFd5dL7opWehdwEbWtoXHTi1bLH+lFuXccyhWSirylLm5WzpPcuitWbz2i4JynCThdJNODerstG0zoZElocPamGc88VrH3sG1prFQi2te1lx1b3HVp1JS1cEl2y6XlZ28yrS2nQlLJGUc97ZVNq77NFcsQwycMsehp9lpNdwq4drJZWS4ZYavg7vd4czPYZnBPSSdu2OZfIo4j2dwtS7lh6Er8fdQTfe0rl2UZvS6S7N/yOfPESiqcYynLO9Fam3ZK7tfXzZrHfwIcR7L0GsqhUhduV6eIrRak98laWj7Tkw9hcN/aViJZ6tRWsqrg4QcdzUVFXtwT0PR42tkUYwdqs3aOdztfjdR+hWq16tJXxFajZ888O+zd72NTLL7N1ep150ZwvJzpTai76uE31Wnyb08T0FKR4+ti5SnShFrK3CcpSulOGa6UHqnLS9tOB6fBVlJJrcceUWLwMIyZUAAAAAAAAAAAAAAAAIK5ORVkB5zbC1i+23ozfAdWP8y9TO2o6LvX4EezZaW/ia9Ezf4Wb5S4RcO36l0p0XaUu8u3M0asoT60/wCV+lvodE51dfvJ/BB+tT8i4ou0tyNjFDcbNGarWRzqVFNU5fajdJ9+/wCR0JlSh1V2SkvU1EW0lbXz/Iir0FJptXcdU7K6fZyJjVmdqhWHVnG101Z3103E2w1anFdz80m/VgbH6i7o/diX4J5diJsawNiNAAAAAAAAAAAAAAAABHVJDSoBw9sx6D/W53Kez31u+L800dHasehLuZytny1fcn5Nfibn/LNWszU5K2n/AAXITTVyrO+d27PqWYX0ukSiQpVv8Tvg/SS/+i4Uq/8AiQ+Gfzp/mSCzhn0US3KeDhbS/huf6/MsoUZkypQ6r+Of3mWZFSm7KXxy9ZXEF65hmkZqxkgNGNj9VeH3YmbmNj9Xy+6i/BPLswNjWBsRoAAAAAAAAAAAAAAAANZmxiQHMx8dGed2fLpNfwv01+h6XGrRnmMJpU8ZL0aN4+KldafXXavl/wAlqL0XcUpS1g+z8C1B6IlRKU8X1qb7ZLzi3/tLNypjHrT+P/ZNfUk8ifDJW3EqikQYd6efzJcwozIqU/t/EvVJ/UsuRVg9anxL7kBBNTatxXf3m61/4MxehkgwY2Puff8ARGWY2Rul8TL8EdqBsawNiNAAAAAAAAAAAAAAAABhmQwKOKR5XdV/nX0PW4lHkcdpVfen+vI3gjpS+x4r9eRag9CpU3Lsm153/EsQl+vBEppI5FLHS0T5Th6yS+pYkyjj30X2OL8pRf0JL3NLmHe/xJMxWw01eSXB2ffbcTxRLUsZcipCWtTvT/8AFL6FqZz5Ss6nwxf3l9Cykm3RTN8xHwMNhErkNkPrfFL5sizDY8+lJdsn/wCyaf08xPCx36ZuR02SEaAAAAAAAAAAAAAAAADVsSkVq1YDTEzODtDZVScnOCTVt2a0vDT6nY7WRYjEZVoWXSeXNk+jK6t0oOz4dW/1OVt32ihhY7s9SXVhey5OUny+ZcxeO1fRbclvv0Va6v2vcfOPaqo3XqOXB2S5JaEyuo+j6d0mPPy6z8RLW9t8W5XU1Ff5VTha3im/U7eyvbGNeE6dZKFXLLK11JtK9uxnhK81ZFOlVtWhbmvU4LlZZfzeh6j07gy47JjJfyfZdhVf3uIi/wDWn6q53bnktj1WsTWT/wA8H50E/mz0l2zo+o+p8fRz/Lvb4jzXJwXPPt41P4WJs5uIjd1Lcacbf1T/ABJK9VpMgw+IUm+eWN/6vzODo/WePqccpJrKS3X3pxZcGWFl+HUpy0Ro5kLqaWMZj7cu5t1ambIMPWyWqcFOal2RlNpvwai+5M3ixh4rK09U5Tuuacmag9FQkT3OFsiu43pSd3Hqt75Q4eK3Pw5nVdYlbWMxjMU3WCqMG11MyVIVSzBgbAAAAAAAAGk5G0mVMRUA1q1iCXaZXM0nIqbazmUqybTS61uO5PtLMuw0y2RDw5lDBSc453F79En0m42V77kfN/bKqpVVPSDqQU7X03uLs2ucXofXsPR1TKk/Z3D1o5KtKM1fqtdWXNcYvuLe8dvourvT8nvfCct2lvbdklq2+xLed/YXsTia84zdKdGF7+8msunZF6tn0eH7PMBCcatOlKNSElKL99UaTi7re9fE9VShaKXb9Ecfs+30+o9auU1xz93ksJsKVGrOpKSlGShZJO6cYqP0Okp2G3cZKFTJ9l0lJLLduUZ6peHyOZDatKW6aXY00eO/qPp8/wC/jnPp1ODO547qTG1NGc7Z9S7qPior5p/T1LsFKsv3UfeK9rpq3i2XcPsHLF3dpNapa/qxj0bo+a5+723Wr3/WaZ588ZNbcnbe2I4aGaSzSekYX3vj3JHiq/tlir3TUFwioK1vHeWfbuo1X923dRil9X6s8pXrK1nvPaccvtkrzXU8+d5LMb2fQfZn2u99JUqyUZvqzV0pPk1wZ63BSvF/FP7zPhWHqWaa5n2jYNfPQpy4uKv8X2vW5y67Oz0/JcpqunVbVpx1lHW3NcV4r1SL1OtmSad01e/Y9xUpalnCU1FOK3Ju3c9V87eBHaToxOpYVJ2K2snZefIgnoVLu3cdOkVMNh0v1qXoINNgAAAAAAAR1Wc+o7su12UVvLEpIjirskkMOtRUjdUdCvKnZ9h1IR0Iq1EjSCjEs5U9ba81oyvFuPaiaE0935hColbe/T8Cvh8VBLdPK317Skm1o7Wu0tN7ST4XI9qKpl6EM+tnFSUXk+1Z83u56kdLaENFNOi9yjNZd27K9zRqTsLNadOqrpxqQ3Zk07NXvqt35ENTZVGWsqUJPnls33tbznS2U4Nuio5LWhGPRyK6d485dbW66zLeApV0lnmlotOk9ba3V99+UrEz48cp31f1WXXhYwWBhSfQiopvct1yxXp3jNLfllbvs7EFJrPlnG7SzZlOTW+yvF7m9bb+qzoNXTto2vUzMZj2iXu+C+3CqQqRqVYVHGcE3VcdFUV4uPZoou2/U8XX2jSWufwcJJrzR+p4qMrqSV+KaWvnvRycb7K4KbbngsLKT3yeEoOT724m9utn02GV2+SbD9g8XUqJ1aao0U9ZOpBykv4VFvfzdj6XhcBGjFU4bkkvLRJHdp01GMorhb6kCw6bzPhuFu3JhxzDwgoq2+9+528zecrO65W/D6k82U4rNJwT3Wb52I5FiKc93mXsNh0jOGo2LkYkXTEYm4AUAAAAAAABDWRROjURRqxswlayRotHckRiUSotUahOcyMrFmlXI1tNOmV6lDkWY1DN0BTVSS36/MljVhLSS0fBoklBEM6SAgey4b6ean2wk0v6er6GnuK0d0oVV/EnCXnFNPyJXG25teJq8RJcb96LuomwdDKm5aybvJ85fglZLuJ0yl/1DnHyZJDFJ8Gu9IgstJ70QVowXO/K7NJVm92i9SMqNYwW+1hJhzI5PkrvkBFiKlk3x4d5rsrD9Jyer4vtJIYOUneei5L8Tp4eioqy0RFkT0okhhIyFAAAAAAAAAABhkNancnMNAc1q3cZuWqtIqSg13F2ljNjVwMpmcxUaxmzdVxdeSNZJehNG2/vzV1iN/QPj4DRtmVRmjRm5i/18gbZUTP68TW5hsDbMasJN7kTU8Pz1CooxbLNKgTU6NidRIqOFMlSMgAAAAAAAAAAAAAAAADDRHOmSgCjUoETg12nSaNHTA5zYbLsqJpLDl2mlNtBtFr+zmVhybNKZlRfIvKgbqiDSgqDZNDDFxUzZRCoIUSWMDcALAAAAAAAAAAAAAAAAAAAAAAAAAAALAAYsZsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBZattEdS-X01NDTxinYAjTNBiBHqfRyImI_3TQ7ESd6c-K1g0vWdG_ZlW6gHpj4vMls&usqp=CAU"
+        ],
+        tag: "Premium Quality",
+        desc: "Lung function tools and flow sensors.",
+        usage: "Patients blow into the device to measure lung capacity or strength."
+    },
+    {
+        id: 69,
+        gst: 12,
+        name: "FLOW SENSOR",
+        category: "Diagnostics",
+        price: 1799.00,
+        oldPrice: 2498.61,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/9/451963624/TT/MQ/IO/24675155/ventilator-flow-sensor.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/9/451963624/TT/MQ/IO/24675155/ventilator-flow-sensor.jpg",
+            "data:image/jpeg;base64,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",
+            "https://tiimg.tistatic.com/fp/1/008/380/3-mm-thick-rigid-plastic-body-98-9-accuracy-ventilator-flow-sensor-for-liquid-use-335.jpg"
+        ],
+        tag: "Bulk Available",
+        desc: "Lung function tools and flow sensors.",
+        usage: "Patients blow into the device to measure lung capacity or strength."
+    },
+    {
+        id: 70,
+        gst: 18,
+        name: "PLAIN CIRCUIT",
+        category: "Surgical",
+        price: 399.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2022/12/BR/LE/YK/68354692/adult-ventilator-circuit-jpg-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2022/12/BR/LE/YK/68354692/adult-ventilator-circuit-jpg-500x500.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWX2CoUINzrtrBjCpyr_gK2AWNMLyff1Jc7P_a61aKpWwN9qTvXTlLTXhkD7ZcdCKIZg&usqp=CAU",
+            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUXGBcXGBcYFxgdGhgXFRUXGBgXFxgaHSggGB0lHRgVIjEhJSktLi4uFx8zODMsNygtLisBCgoKDg0OFxAQFysdHR0uKystListLS0tLS0tLSstLS0tLSsrLS03Ky0rLSstLS0rLS0tKysrLS0vLS0rMysrK//AABEIAMABBgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYCAwQHAQj/xAA7EAABAgIGBwgBAwMEAwAAAAABAAIDEQQFITFBUQYSYXGBkfATIjJCUqHB0bEUcuEjYvEVM5LSJKKy/8QAGgEBAQADAQEAAAAAAAAAAAAAAAECAwQGBf/EACMRAQADAAICAgIDAQAAAAAAAAABAhEDEgQhMVEFQWGRoSL/2gAMAwEAAhEDEQA/APcUREBERAREQERYveAJkgDagyRR1JriG246345qJpOkbvLZu+z1vVwWdYOitF7gOIVR/XRn2zkMyfwPpYOeMYpOxo+eSvUW/wDUs9TeY2/R5L5+qZ6hz3fYVOMZmbzx29cl8bEZm8cusfdMhNXI0pnqHU/orIR2+ocx1iOap/dwiEbxv/hbYbDg8Hjtn+SmGraHjMLKaqZZEGJ58PtfRGiDrrYE6mrWirDKziDNb4dduF464dWp1NWBFFQq7abxJdcOnwz5lMV1IvjXA3Ga+qAiIgIiICIiAiIgIiICIiAiIgIvjnACZMgLSTgqxW9dsijs2Pk3zOBkXDJuzagkKzrjV7sOROLj4RsHqKrVLrMkzJLjmfq4cFwUqljWAaJAWEZjIrUwTKqOkvc42ldDdVgmZE/j4WkO1RZetLnklXR0RaS515Rrc+urVhBYpCDRhiTuH2rEamtLWrYGjrguoQGemfEr7+mBub7nZ1xWXU1zhgy6tWXZNzI665LaKJlNfDR3KdTWADhc5ZfqHC8ArEgi8L5rKZMLrcI7TfMLLUBuIXMVgQmo6X0fYtTmSuWsRnC4o+nOHiE1dSW+HS3Nx/K7oFfEWEg7/hV4V1BJk4ObbeFlEpMEyIiAk2SlaOXDmmNcc9JnNXWi1k14nIjfL4K62vBuIXn8OKQZAmY+bpZ8F1frNV3eGtLaZAjIZ7VjMNsWiV4RV6DpDMbdv2u2jVy0+KzaLfb/ACpi6lEWEOK1wm0g7lmooiIgIiICIiAtVJpDYbS95DWi8lbVSa4p36iNqg/0oZkLR3nC923Ifyg6q0rXthq2shZS7zxhrZDYJqs1nTCTICQFy7KzjaokOt+1Qo7xVHRBYXFdpaG4zOeE9ma0wxqiWJvR7uupoj6962QGklaqPDL3BrRMkyAVlo1QuYJxHsZvNvXFIHFR4UguxjV0GHAb4opOxoT/AFKA3wwyf3FbO0JjW1bWwycDyKxdXrvKxreC1Gt4xx9gp2MdraG/0lbBQH+n3H2os0yKfO7msXOiG8nn1kVO0mQlnUF2Q5han1c4+Uc2/ai3Mdn1avhY7op2kx1xKuIwIXK6ju3rAtdmvhiv9R5q9hi9pyXJSrua6XRnLmpFKzAU2Gu/wrtKZauaDEaxuu4kWyEszipePSYJsc0jaFXq5pLYdkMhwJNjh4T1JbP0+NesVtNu0S20WsXtiPEyWiXidMnbsKlKNXYmGunb5tqqtGDj39a032e0l0ve4NtDZCZmL87c1s6xMe3BTyb8d56T6+l1e+SQ6WRcVUKx0sbBhQwbYjhK42S8xzw3rmh6ZQpDXMjiWzI4g94ciNq5rTETj1fjxbl445Kx6l6XQ6yIkQZHrkp6hV1hEu9UpcxNedUGnBwBaZztBCnqJSpjI9ddST5Z5j0FrgRMGYOK+qnVbWpgPk4/0nG0WzYcwDcMwrgDO0LEfUREBEUfXtZijwXPvdc0ZuN33wQRmmFeCDD7Nh/qvss8rTe7fkoOpIcmWWcfjFV6s3OL2ueSXOm4k4zKsVTxJsl9fhBE1u/vFaKM2W9SkSre0iHWiNhsba5zvgYlddJrWBBhuh0eHPWaWmK7xGYkZY/jckehCsfO1fHuWhpsWTXzRHfV1IMN2s0yMpTynkul1Ic4zJM8+urVxwBZ11muyBBc4yaCTkOCygGieK2sHXXFSFHqKMb2ho2n4CkIOjnqfyHyU9CFYtgKs0CqITfLrfut9rl2MgtFzQNwCmmKg1pyPIra2A83MceBVtRNMVQUKJ6HcihoEX0O5K1ommKe+ixBex3/ABK0RGEXghXdfCE0xQnFR1YGxeixavhOvht5S/C5I2j0B17TwcUiWvk45tExDySl3E8OZkoqsKHORlMATlicyvVqy0EhPB7OI5mwgEfB/Kp3+gxYry2EztHNmNYWNxE5m6a2xeHx+Tw+SJnf8VSDDMgQ4yWFKiva226Y5TVugaBU0CRY3/kz/su92hj4TNaMxr5i24hs7LRntWyb1z5cfF4PPa//AFXI/l4rXcYvjO2SA5A/JXC/4Xplc6DQosTXY8w7JFoAImLjabP8KMoOgkorTFiB0MG0Bsi6VsjPBcVqzM69l416U4a1+oiHqlTaHNiVfRSR2dIECHM4OOoLHjHfeoUNfCiFjxJzDIjq8FX2oq6EUBjpB8rJXOGYyOxRmm9WzDY7Ra2TX7QT3TwNnFZw55nUPGOs3Zun7ZblN6F1trA0dx7zBNhzZO7h+DsUFAPcw3HHn1Yo+g03sKVCiYBwa79ru6fYz4Ko9WREUBefaZU3tKUIU+7CAEv7nSJ9tVegryA0jtI8R580Rx/9rEGFcEdo2WDZe8/lSdTUvVOPt8qOrRveK10WJIyQT9fUebREaDZskoIvViqykhw1HXHb99bFC1nQDCfLym1p2ZIMC5pbYe9lLDepOo6iix+8AGsBlrG6ewYqDhgucABaSAN5MgvVqjq7sILYc5m0k7TfLYg46HoxCZ4iXnkOQ+1MwYLWiTQAMgFmiAiIgIiICIiAiIgIiICIiDRTobnQ3tYQHFpAJuBI2LmqKrewhBlhdMlxFxJy2ASCkERMFjFhhwLXCYNhCyRFVCvNHywF8KZbi28jdmFVohXrCpeltS6hMZg7h8Q9JOO4+3FExX6PSCJSJEjMHI7Fb4daikUSM10u0aw6wzkJhw4hUaGbZLso8R7XjVNpBadrXCR6zRXbDsZfKedgOycpKt1u60y4KzUs6jZWg7vmdqqtPm4yvJsVHtFFdNjTm0H2RKKyTGg4NA5BFBnEFh3FeLUawmd4JnzXta8erctFJjavh7R8pXeIoOmlsmAbbQuBhmSMW3/ma7qO6Ykeiomty6EWxQCQLHAYhQStFjEFT8BzY0PUfIbZSI2g4KswHhwDmmwqQosbHFVHVo1VZbTWNeJhoLwcDK48yOK9HVSqysDMEEBwstxGR6Ks1FpIeJi/EYhFb0REBERAREQEREBERAREQEREBERAREQFjFhhwLXCYIkRmCskQeW1xVxgRiwzle05tNx34cF3VZBEu0dYALLvlWHSmiw4pZN0nMJ1pW90i45Wy91X6xpYlqssAsw+PtWER9ZUmZP0PgLTo3Qu2pUIG4O13bmW+8gOK545mrjoBVmq18d3m7rdwPePEgcklVwREUHBX1N7GjxYgva0y/cbG+5C8ao05meNtueK9R0/P/hv/cz/AOgvMIA5qSJCjPwXZEhiI0g5WqPZmF3QH44pA4KNBMN0rx1aFIgYhdLQDaL1i9pDhKZDiBLEE2BVG2jxCLQp6r6baCDJw2X7DKUxwUA6EWnEbNq3wnqi+0Skh4mLCLxl/C3qqVfTyJWyOdvLoKw0SmB1hkHZTsO5RXUiIgIiICIiAiIgIiICIiAiIgItUWktbebchaeQUfSa3ldIb7TyH2rhqTe8ATJkNqi6wrUASBltx4C8byFD0ytibid5+BgomNEJtPWxXE1nTqaXWCwdWqMiu666sW49fC0R3SSRw0qKGyGJMv5Xr9HghjWsaJNaAANgXikVhe8NFpJAG8mQXtrGyAGQksVZIiIIrSmhmLRYrRfq6wGZZ3pey8lgi1e3ryjSWrOxpD2gSaTrN/a76tHBSRyQWrc0SWmEV2sbMbfygzguxC6mmcjcRI8QuNokuqHaqiejxoVIbNw1IovPldLPL4UOYcl8YZLdrE23oDDwUhRqXKw/42j+Fwas1tZtVRaKHT8HGY9WX7pXb1IqnQoxapWhVlL6J6lzRdTiLhNZtEpghYmtWdHkmGpBFHGtW7Pf6WBrYbORTDUoih3Vv1Ja3VwcEw1OL45wF5Vci1m84rSaY8YnLrJXqnZZjGbnyt/C54lZMGOMspc1XXxnm9xWtwsOadTU9FrdoxHCZ+lH0mtibiTv+hfxUcWoAria+xKU82T5ey5nGd5W0g/hYPYBeqNDuvwVgYfW5dBWiNFCK54pko2kPvK6oz53riiiaxV1aK0ExKVDsmGnXO5tv5kvV1XtDap7GFruHfiSO5vlHzxVhWKiIiAobSaphSIdn+42Zac82neplEHj7oRaZEEEWEHAjBdEEq76RaOiKe0hyETEYO+jtVMjUZzHFrgQRgb1BsDlm0ZLXDK3NbkiNzHYFbJSWlu1boZIQbWFZtasJA3LNrpXqj6HSWQOV+SELTFxVa7TkNorCXddaOua6oDWP8J4YqBiPzWlscg909ZLZEOC3kzWdlaOzbiSmq3aqoyvHa51pulfbcpigVk2JcbfSbORunvWU8cwvF+Q4uSc+EjJuScMlz/qbZarpi8SX3tnejmVg7Ytvw2z+Uc0n2WgxH/2jisS1x8T7Ng+U9MnQ4AXkDitRpEO3vBaTBZfqz3kr7IYNbyCmrh+s9LHHhIc187Z58rRvP0siXFYGEevZNVi5+buS16+Qt9+az1R8/BWDh8+xsU1Wp7ies1of11vXQ9vz9rroVTRItzZN9RsHDNBBuZNWTR/RmcokYSbe1hvO12Q2c8lO1ZUcOFbLWf6jhuGClFioiIgIiICIiAuSsKuhxhJ4twIvG4rrRBSqfo3EZazvt2X8R9KL7MgkGw5FekrRSaIyJ42g/nnegoIWU1Z6To402scQcjaOd6jI1SxW26ut+232vREe0ra12aPorh5SN4IWtBukcF8cZrFrpLLWB2IwlxxqOcLVAVjFLTtv91aHNIXDT4bHAhwvsW6lsl8zzfH7UnrOKzApMhJwnPHG3auhlnhM/z/ACtNKoDof9zfUPnJfaF454BdP69PN17RbrZMNeSBMkECwg3YqxsgvIBM8FBUQ65l1JTYiFc95el8CuRM/bJ8HavuoF8JsXTDoMQixjuNn5Wp9KHOAFg1Sjanif2jj/C6IFRjzu4D7KjLEIsHK0w6qhDyz3kn2uW5lDhi5jeSauKjBor3+FpPCzmu6Do/Ed4iGjmfb7VnRRUdQqmhQ7Zaxzd8C4KRREBERAREQEREBERAREQEREBERB8IWl9Ehm9jDvaFvRBD0yoGOtYdQ5Xt/hV+m0R8MyeJZHA7irwvjmgiREwiTCgCIRcueLFa422SxVup+jzHAmH3HYYt5YKtU+pI0Oc2Ej1NtH37LKuOTyKWz1Go2LBOBmFGugtYS+ZbLASt4FdjiRcVE1zTwSWubbmMzsXRWZfD8itYjZhMVPXcCH44ZcCRaDIzF+w7ldqorChRpCGW61vddY63CRv4TXkGrkZ9ZL6ykHETWVuKssfH/Jc3HlciY/p7w2jMFzG8hhctqhdD+0/SQzEc5xcNYaxmQ0+ET3S5qaXJPqXp6W7Vi2ZoiIozEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREEfTqmgxZ6zBP1Cw8xfxXmWlmikaAe0/3GETLmtMmmdxtnlavXUIWdLzWXL5PiU565Pqft+ebRaFK6N0I0mkMg6sw4zccmi1x5L0+ttC6JGmdTs3HzQ5Nt2tlqnkvmimijKGXu1td7rA6UpMGEp4m/cFtnliYfI4vxXLXmr2ya/aww2AAAWACQGwLJEXO9CIiICIiAiIgIiICIiAiIgIiIP//Z"
+        ],
+        tag: "Limited Stock",
+        desc: "",
+        usage: ""
+    },
+    {
+        id: 71,
+        gst: 5,
+        name: "DEFIBRILLATOR PADS",
+        category: "First Aid",
+        price: 2499.00,
+        oldPrice: 3470.83,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/61SiA+ZTr8L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61SiA+ZTr8L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+            "https://m.media-amazon.com/images/S/aplus-media-library-service-media/453c1aa4-ea02-4559-a671-3d9fa2f7212d.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR61KsrcUF-ZOHRsdvxigEjydeBP_t3QqX6_Gz04LxirOAHrTrZ--V4IJxrMH_wPpeOb8s&usqp=CAU"
+        ],
+        tag: "Fast Delivery",
+        desc: "Adhesive conductive pads.",
+        usage: "Placed on the chest to deliver an electric shock to restart the heart."
+    },
+    {
+        id: 72,
+        gst: 12,
+        name: "X-RAY VIEWER (SINGLE PANEL)-LED",
+        category: "Diagnostics",
+        price: 5999.00,
+        oldPrice: 8331.94,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/21-F1dr2pzL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/21-F1dr2pzL.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/418732047/HE/TP/GW/34238294/x-ray-view-box-250x250.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/10/NY/QW/PR/34238294/led-x-ray-view-box-premium-double-film-pics-1--500x500.jpeg"
+        ],
+        tag: "Quick Ship",
+        desc: "LED light boxes (Single, Dual, Triple panels).",
+        usage: "Used to illuminate and examine X-ray films in detail."
+    },
+    {
+        id: 73,
+        gst: 5,
+        name: "X-RAY VIEWER (DUAL PANEL)-LED",
+        category: "Diagnostics",
+        price: 7999.00,
+        oldPrice: 11109.72,
+        discount: "28% OFF",
+        image: "https://cpimg.tistatic.com/01496954/b/8/Four-In-One-Screen-Led-X-Ray-View-Box.jpg",
+        images: [
+            "https://cpimg.tistatic.com/01496954/b/8/Four-In-One-Screen-Led-X-Ray-View-Box.jpg",
+            "https://cpimg.tistatic.com/10602797/b/4/Led-X-Ray-View-Box..jpg",
+            "https://cpimg.tistatic.com/01496923/b/9/Double-Screen-Led-X-Ray-View-Box.jpg"
+        ],
+        tag: "Eco Friendly",
+        desc: "LED light boxes (Single, Dual, Triple panels).",
+        usage: "Used to illuminate and examine X-ray films in detail."
+    },
+    {
+        id: 74,
+        gst: 18,
+        name: "X-RAY VIEWER (TRIPLE PANEL)-LED",
+        category: "Diagnostics",
+        price: 8999.00,
+        oldPrice: 12498.61,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/BP/NH/UF/SELLER-4872186/led-x-ray-viewer-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/BP/NH/UF/SELLER-4872186/led-x-ray-viewer-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/11/FK/HL/QY/6521381/led-x-ray-view-box-250x250.png",
+            "https://5.imimg.com/data5/SELLER/Default/2022/11/RB/EX/MI/6521381/x-ray-viewer.png"
+        ],
+        tag: "Quality Assured",
+        desc: "LED light boxes (Single, Dual, Triple panels).",
+        usage: "Used to illuminate and examine X-ray films in detail."
+    },
+    {
+        id: 75,
+        gst: 12,
+        name: "BIPOLAR CABLE",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41+tHLAPjyL._AC_UF1000,1000_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41+tHLAPjyL._AC_UF1000,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/610zW6JzWgL._AC_UF1000,1000_QL80_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/12/BR/IZ/XK/3979851/diathermy-reusable-bipolar-cable.jpg"
+        ],
+        tag: "Top Rated",
+        desc: "Bipolar/Monopolar cables and forceps.",
+        usage: "Uses electricity to cut tissue or seal bleeding vessels during surgery."
+    },
+    {
+        id: 76,
+        gst: 18,
+        name: "DIATHERMY CABLES",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://i.ebayimg.com/images/g/0-wAAOSwifhejr0-/s-l1200.jpg",
+        images: [
+            "https://i.ebayimg.com/images/g/0-wAAOSwifhejr0-/s-l1200.jpg",
+            "https://i.ebayimg.com/images/g/AuAAAOSwWu5ejr1B/s-l1200.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/337564907/VK/DC/ZD/27572120/whatsapp-image-2023-08-19-at-9-28-16-pm.jpeg"
+        ],
+        tag: "Bulk Available",
+        desc: "Bipolar/Monopolar cables and forceps.",
+        usage: "Uses electricity to cut tissue or seal bleeding vessels during surgery."
+    },
+    {
+        id: 77,
+        gst: 5,
+        name: "MONOPOLAR CABLE",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51OHTaVma9L.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51OHTaVma9L.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/8/HM/MA/DH/155611110/laparoscopic-monopolar-cable-4mmx300cm-reusable-surgical-instruments.jpeg",
+            "https://i.ebayimg.com/images/g/DKsAAOSwLZlmZFK2/s-l400.jpg"
+        ],
+        tag: "Recommended",
+        desc: "Bipolar/Monopolar cables and forceps.",
+        usage: "Uses electricity to cut tissue or seal bleeding vessels during surgery."
+    },
+    {
+        id: 78,
+        gst: 12,
+        name: "O2 SENSOR",
+        category: "Diagnostics",
+        price: 7999.00,
+        oldPrice: 11109.72,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2025/6/518124776/XM/RV/ZD/45635244/medical-oxygen-sensor.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2025/6/518124776/XM/RV/ZD/45635244/medical-oxygen-sensor.jpg",
+            "https://cpimg.tistatic.com/08470514/b/4/MOX1-MedicaL-Sensor.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2023/8/335201713/QU/DM/VL/92933637/product-jpeg.jpg"
+        ],
+        tag: "Eco Friendly",
+        desc: "",
+        usage: ""
+    },
+    {
+        id: 79,
+        gst: 5,
+        name: "BIOPOLAR FORCEPS (imported)",
+        category: "Surgical",
+        price: 3999.00,
+        oldPrice: 5554.17,
+        discount: "28% OFF",
+        image: "data:image/jpeg;base64,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",
+        images: [
+            "data:image/jpeg;base64,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",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNg5j_Mn25YMwwN4yxZVzyy34fiMTJzXwflNxIjGUdFw00XQewIIl14rXD6Eedlrx6EI&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE3EZ8fhWiTbVrr_8El-nZNK6Sqpi8zbH69AzNz16HMuezfCLuIJndAYWMuw5I5sVZ5LY&usqp=CAU"
+        ],
+        tag: "New Arrival",
+        desc: "Bipolar/Monopolar cables and forceps.",
+        usage: "Uses electricity to cut tissue or seal bleeding vessels during surgery."
+    },
+    {
+        id: 80,
+        gst: 18,
+        name: "BIPOLAR FORCEPS",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/1/BE/YO/HY/115082354/product-jpeg-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/ANDROID/Default/2022/1/BE/YO/HY/115082354/product-jpeg-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2020/8/XN/ZY/IC/3588898/bipolar-forcep-open-surgery-500x500.JPG",
+            "https://5.imimg.com/data5/ANDROID/Default/2023/1/TV/HS/PC/138337688/product-jpeg.jpg"
+        ],
+        tag: "Eco Friendly",
+        desc: "Bipolar/Monopolar cables and forceps.",
+        usage: "Uses electricity to cut tissue or seal bleeding vessels during surgery."
+    },
+    {
+        id: 81,
+        gst: 12,
+        name: "SILICON PATIENT PLATE",
+        category: "Surgical",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/8/336669570/QY/OB/BY/5538683/silicon-patient-plate-black-rubber-indian-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/8/336669570/QY/OB/BY/5538683/silicon-patient-plate-black-rubber-indian-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/2/487020943/KF/EV/GN/103716506/image-2024-10-23-19-26-51.jpeg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/8/535780588/OQ/KX/ZR/7904683/surgical-silicone-rubber-patient-plate.jpeg"
+        ],
+        tag: "Eco Friendly",
+        desc: "Silicon, metal, or disposable grounding pads.",
+        usage: "Provides a safe return path for electricity during monopolar surgery."
+    },
+    {
+        id: 82,
+        gst: 18,
+        name: "METAL PATIENT PLATE",
+        category: "Surgical",
+        price: 1299.00,
+        oldPrice: 1804.17,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/LW/TW/SU/119905544/steel-parient-plate-500x500.png",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/ED/GM/FU/119905544/alan-silicon-patient-plate-with-cable-250x250.png"
+        ],
+        tag: "Award Winner",
+        desc: "Silicon, metal, or disposable grounding pads.",
+        usage: "Provides a safe return path for electricity during monopolar surgery."
+    },
+    {
+        id: 83,
+        gst: 5,
+        name: "SPLIT PAD",
+        category: "Surgical",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41ZGPKO+siL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41ZGPKO+siL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_QL100_.jpg",
+            "https://m.media-amazon.com/images/I/41ZGPKO+siL._AC_UF350,350_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/41ZGPKO+siL._AC_UF350,350_QL80_.jpg"
+        ],
+        tag: "Best Value",
+        desc: "Silicon, metal, or disposable grounding pads.",
+        usage: "Provides a safe return path for electricity during monopolar surgery."
+    },
+    {
+        id: 84,
+        gst: 12,
+        name: "DISPOSABLE PAD",
+        category: "Surgical",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2021/1/ZJ/ZJ/HX/29879742/grf-bilogical-glue.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/ZJ/ZJ/HX/29879742/grf-bilogical-glue.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/10/550136259/WZ/BR/AK/5555222/disposable-electrosurgical-pad.png",
+            "https://5.imimg.com/data5/SELLER/Default/2025/3/496981252/WU/GK/CC/123644940/disposable-patient-cautery-pad.png"
+        ],
+        tag: "High Quality",
+        desc: "Silicon, metal, or disposable grounding pads.",
+        usage: "Provides a safe return path for electricity during monopolar surgery."
+    },
+    {
+        id: 85,
+        gst: 5,
+        name: "VENTED MASK",
+        category: "First Aid",
+        price: 1799.00,
+        oldPrice: 2498.61,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2022/12/CN/TT/YM/972966/aero-win-full-face-non-vented-large-medium-small.jpeg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2022/12/CN/TT/YM/972966/aero-win-full-face-non-vented-large-medium-small.jpeg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/1/480547296/BB/IW/EL/238911224/repimed-icu-niv-mask.png",
+            "https://5.imimg.com/data5/SELLER/Default/2021/11/TW/TD/BZ/2236424/niv-mask-500x500.jpg"
+        ],
+        tag: "Best Seller",
+        desc: "Vented, Nonvented, and Nasal masks.",
+        usage: "Used with CPAP/BiPAP machines for non-invasive breathing support."
+    },
+    {
+        id: 86,
+        gst: 18,
+        name: "NONVENTED MASK",
+        category: "First Aid",
+        price: 1799.00,
+        oldPrice: 2498.61,
+        discount: "28% OFF",
+        image: "https://cpimg.tistatic.com/08907841/b/4/Resmed-AcuCare-F1-0-Face-Mask.jpg",
+        images: [
+            "https://cpimg.tistatic.com/08907841/b/4/Resmed-AcuCare-F1-0-Face-Mask.jpg",
+            "https://5.imimg.com/data5/VY/ET/MY-27810726/resmed-mask-500x500.jpg",
+            "https://images-eu.ssl-images-amazon.com/images/I/51VI4H6x1PL._AC_UL210_SR210,210_.jpg"
+        ],
+        tag: "Bestseller",
+        desc: "Vented, Nonvented, and Nasal masks.",
+        usage: "Used with CPAP/BiPAP machines for non-invasive breathing support."
+    },
+    {
+        id: 87,
+        gst: 12,
+        name: "NASAL CANNULA",
+        category: "Mobility",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://image.made-in-china.com/2f0j00MiIgLPefbybV/Nasal-Cannula-High-Flow-Hfnc-Oxygen-Tube.webp",
+        images: [
+            "https://image.made-in-china.com/2f0j00MiIgLPefbybV/Nasal-Cannula-High-Flow-Hfnc-Oxygen-Tube.webp",
+            "https://image.made-in-china.com/2f0j00YhmufODggSba/Nasal-Cannula-Oxygen-Tube-High-Flow-Hfnc-Oxygen-Tube-Oxygen-Therapy.webp",
+            "https://5.imimg.com/data5/SELLER/Default/2021/6/OF/ZM/YK/122002067/medical-hfnc-cannula-500x500.jpg"
+        ],
+        tag: "Quality Assured",
+        desc: "Vented, Nonvented, and Nasal masks.",
+        usage: "Used with CPAP/BiPAP machines for non-invasive breathing support."
+    },
+    {
+        id: 88,
+        gst: 18,
+        name: "NASAL MASK",
+        category: "First Aid",
+        price: 1499.00,
+        oldPrice: 2081.94,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41K3peNopZL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID44PC9zcGFuPg==,500,900,420,420,0,0_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41K3peNopZL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID44PC9zcGFuPg==,500,900,420,420,0,0_QL100_.jpg",
+            "https://5.imimg.com/data5/JD/DO/MY-49098239/cpap-and-bipap-nasal-mask.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/1/378922150/GO/JI/RA/69493016/cpap-ivolve-n2-nasal-mask-500x500.jpg"
+        ],
+        tag: "Premium",
+        desc: "Vented, Nonvented, and Nasal masks.",
+        usage: "Used with CPAP/BiPAP machines for non-invasive breathing support."
+    },
+    {
+        id: 89,
+        gst: 5,
+        name: "BP APPARATUS (Diamond)",
+        category: "Diagnostics",
+        price: 4199.00,
+        oldPrice: 5831.94,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41ms3btsc4L.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41ms3btsc4L.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/10/FF/TY/GG/121588716/manual-blood-pressure-machine.jpg",
+            "https://cpimg.tistatic.com/6367110/b/4/bp-apparatus.jpg"
+        ],
+        tag: "Safety First",
+        desc: "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
+        usage: "Measures blood pressure manually using mercury/dial or automatically."
+    },
+    {
+        id: 90,
+        gst: 12,
+        name: "CUFF BP APPARATUS (PHS)",
+        category: "First Aid",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2021/10/ZD/SZ/FJ/124095643/aneroid-sphygmomanometer-500x500.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2021/10/ZD/SZ/FJ/124095643/aneroid-sphygmomanometer-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/1/482198814/ED/ON/RK/128071808/ad51c-accusure-aneroid-sphygmomanometer-500x500.jpeg",
+            "https://image.made-in-china.com/2f0j00KMgovtksbzbE/Hospital-Blood-Pressure-Monitor-Aneroid-Sphygmomanometer-Stethoscope-Kit-Tensiometer.jpg"
+        ],
+        tag: "High Quality",
+        desc: "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
+        usage: "Measures blood pressure manually using mercury/dial or automatically."
+    },
+    {
+        id: 91,
+        gst: 5,
+        name: "DIGITAL BP APPARATUS",
+        category: "Diagnostics",
+        price: 1999.00,
+        oldPrice: 2776.39,
+        discount: "28% OFF",
+        image: "https://images-eu.ssl-images-amazon.com/images/I/51swDPamvJL._AC_UL210_SR210,210_.jpg",
+        images: [
+            "https://images-eu.ssl-images-amazon.com/images/I/51swDPamvJL._AC_UL210_SR210,210_.jpg",
+            "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=400,w=400/products/bp5150-hero-1200x1200.jpg?signature=084ce13e1416b2e40e66768c17d0506a23c4dcdc30d91418c23c11f28a7f30ef",
+            "https://i.ebayimg.com/images/g/v2gAAOSwXj5j14ry/s-l400.jpg"
+        ],
+        tag: "Professional Grade",
+        desc: "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
+        usage: "Measures blood pressure manually using mercury/dial or automatically."
+    },
+    {
+        id: 92,
+        gst: 18,
+        name: "BP BULBS",
+        category: "First Aid",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://rukminim2.flixcart.com/image/300/300/krdtlzk0/bp-monitor-bulb/2/h/d/bp-bulb-with-valve-original-deluxe-quality-agarwals-original-imag56ddwpjnyaun.jpeg",
+        images: [
+            "https://rukminim2.flixcart.com/image/300/300/krdtlzk0/bp-monitor-bulb/2/h/d/bp-bulb-with-valve-original-deluxe-quality-agarwals-original-imag56ddwpjnyaun.jpeg",
+            "https://images-eu.ssl-images-amazon.com/images/I/21prWrzvclL._AC_UL600_SR600,600_.jpg",
+            "https://images.jdmagicbox.com/quickquotes/images_main/bp-bulb-with-valve-imp-pvc-2019950843-e4sbutmx.jpg"
+        ],
+        tag: "Top Rated",
+        desc: "",
+        usage: ""
+    },
+    {
+        id: 93,
+        gst: 12,
+        name: "BP BAGS",
+        category: "First Aid",
+        price: 249.00,
+        oldPrice: 345.83,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41tOWM5lnSL._AC_UF350,350_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41tOWM5lnSL._AC_UF350,350_QL80_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/10/XC/PE/AV/1098961/blood-pressure-bladder.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/2/VQ/AU/VL/4480/smart-care-b-p-rubber-bag-pvc.JPG"
+        ],
+        tag: "Best Value",
+        desc: "",
+        usage: ""
+    },
+    {
+        id: 94,
+        gst: 18,
+        name: "OXYGEN FLOW METERS TYPE-1",
+        category: "First Aid",
+        price: 1799.00,
+        oldPrice: 2498.61,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51sYPdmhECL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51sYPdmhECL.jpg",
+            "https://cpimg.tistatic.com/07281856/b/4/Fine-Adjustment-Valve.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2021/5/VK/ES/YT/20556/prod-20210516-0626212908376570136101644-jpg-500x500.jpg"
+        ],
+        tag: "Premium Choice",
+        desc: "Precision valves for oxygen delivery.",
+        usage: "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient."
+    },
+    {
+        id: 95,
+        gst: 5,
+        name: "OXYGEN FLOW METERS TYPE-2",
+        category: "First Aid",
+        price: 2499.00,
+        oldPrice: 3470.83,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/4/412926603/OO/HM/QT/189175314/green-type-regulator-with-bottle.jpeg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/4/412926603/OO/HM/QT/189175314/green-type-regulator-with-bottle.jpeg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/11/VD/FV/UC/2789290/oxygen-regulator-500x500.PNG",
+            "https://5.imimg.com/data5/SELLER/Default/2024/4/407847250/GL/YT/RI/1218664/medical-oxygen-regulator.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Precision valves for oxygen delivery.",
+        usage: "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient."
+    },
+    {
+        id: 96,
+        gst: 12,
+        name: "OXYGEN FLOW METERS TYPE-3",
+        category: "First Aid",
+        price: 1599.00,
+        oldPrice: 2220.83,
+        discount: "28% OFF",
+        image: "https://www.indosurgicals.com/images/products/40029-flowmeter-humidifier-bottle.jpg",
+        images: [
+            "https://www.indosurgicals.com/images/products/40029-flowmeter-humidifier-bottle.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/9/CA/FV/BF/78654024/oxygen-flow-meter-with-humidifier-bottle.jpg",
+            "https://www.psmworld.com/wp-content/uploads/2018/06/IMG_20180713_170747_HDR.jpg"
+        ],
+        tag: "Limited Stock",
+        desc: "Precision valves for oxygen delivery.",
+        usage: "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient."
+    },
+    {
+        id: 97,
+        gst: 5,
+        name: "OXYGEN FLOW METERS TYPE-4",
+        category: "First Aid",
+        price: 3499.00,
+        oldPrice: 4859.72,
+        discount: "28% OFF",
+        image: "https://cdn.tri-anim.com/ths/products/group004352_original_515Wx515H_8941830995998",
+        images: [
+            "https://imgcdn.mckesson.com/CumulusWeb/Images/High_Res/PRECMD_544764.jpg",
+            "https://cdn.tri-anim.com/ths/products/group004352_original_515Wx515H_8941830995998",
+            "https://imgcdn.mckesson.com/CumulusWeb/Images/Item_Detail/997046.jpg"
+        ],
+        tag: "Premium Quality",
+        desc: "Precision valves for oxygen delivery.",
+        usage: "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient."
+    },
+    {
+        id: 98,
+        gst: 18,
+        name: "REUSABLE TRANSPARENT INFUSION PRESSURE BAGS (100 ml)",
+        category: "Mobility",
+        price: 4299.00,
+        oldPrice: 5970.83,
+        discount: "28% OFF",
+        image: "https://shop.bionetus.com/cdn/shop/products/C-Fusor-1000mlMX4810_1024x1024.jpg?v=1674172699",
+        images: [
+            "https://shop.bionetus.com/cdn/shop/products/C-Fusor-1000mlMX4810_1024x1024.jpg?v=1674172699",
+            "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lq0AAOSwZNNnbzqY/$_57.JPG?set_id=880000500F",
+            "https://5.imimg.com/data5/SELLER/Default/2023/6/314642767/VV/CE/LQ/21602920/smith-medical-c-fusor-pressure-infusor-devices-500x500.webp"
+        ],
+        tag: "Premium",
+        desc: "Inflatable sleeves for IV bags (1000 ml).",
+        usage: "Squeezes the IV bag to force fluids into the patient rapidly during emergencies."
+    },
+    {
+        id: 99,
+        gst: 12,
+        name: "REUSABLE INFUSION PRESSURE BAGS",
+        category: "Mobility",
+        price: 1899.00,
+        oldPrice: 2637.50,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51enieAwFnL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51enieAwFnL.jpg",
+            "https://m.media-amazon.com/images/I/61VEv-fWErL._AC_UF1000,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/51BEC59uCfL.jpg"
+        ],
+        tag: "Top Rated",
+        desc: "Inflatable sleeves for IV bags (1000 ml).",
+        usage: "Squeezes the IV bag to force fluids into the patient rapidly during emergencies."
+    },
+    {
+        id: 100,
+        gst: 18,
+        name: "DISPOSABLE INFUSION PRESSURE BAGS",
+        category: "Mobility",
+        price: 1199.00,
+        oldPrice: 1665.28,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51SGuZMXXiL._AC_UF350,350_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51SGuZMXXiL._AC_UF350,350_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/613r7J8t+ZL._AC_UF894,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/6196r9mUxdL._AC_UF350,350_QL80_.jpg"
+        ],
+        tag: "Top Pick",
+        desc: "Inflatable sleeves for IV bags (1000 ml).",
+        usage: "Squeezes the IV bag to force fluids into the patient rapidly during emergencies."
+    },
+    {
+        id: 101,
+        gst: 5,
+        name: "NEBULIZER",
+        category: "Diagnostics",
+        price: 1499.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://www.seremed.com/wp-content/uploads/2020/11/Cicoboy.jpg",
+        images: [
+            "https://www.seremed.com/wp-content/uploads/2020/11/Cicoboy.jpg",
+            "https://rukminim2.flixcart.com/image/480/640/xif0q/nebulizer/4/9/2/nebpro-lx-105-nebulizer-with-complete-kit-for-adult-and-child-original-imah8ff2ww3bst2g.jpeg?q=90",
+            "https://images.squarespace-cdn.com/content/v1/6487334be849e87dffd73f5c/1707805758329-Q45VLD8BEKOQTNWQ3SBH/little-boy-using-steam-inhaler-nebulizer-health-medical-care.jpg"
+        ],
+        tag: "Premium Choice",
+        desc: "Weight scales and medication misting machines.",
+        usage: "Nebulizer: Turns liquid medicine into a mist for inhalation."
+    },
+    {
+        id: 102,
+        gst: 12,
+        name: "WEIGHT SCALE",
+        category: "Diagnostics",
+        price: 1999.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1600,w=1600/products/sc150_hero_800x800.png?signature=d0a3d1b7af391f4bc2fb0b8147714019d6eb6d7a7102136e65433d37e7574cb7",
+        images: [
+            "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1600,w=1600/products/sc150_hero_800x800.png?signature=d0a3d1b7af391f4bc2fb0b8147714019d6eb6d7a7102136e65433d37e7574cb7",
+            "https://www.petrame.com/bahrain-en/wp-content/uploads/2024/02/HN286-1.jpg",
+            "https://static-01.daraz.com.np/p/44ebf21b461fb1ebe9e5da1ff580f10e.jpg"
+        ],
+        tag: "Hot Deal",
+        desc: "Weight scales and medication misting machines.",
+        usage: "Nebulizer: Turns liquid medicine into a mist for inhalation."
+    },
+    {
+        id: 103,
+        gst: 5,
+        name: "CHILD SCALE",
+        category: "Diagnostics",
+        price: 3499.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/51RfizRx-qL._SX522_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/51RfizRx-qL._SX522_.jpg",
+            "https://m.media-amazon.com/images/I/51gb3GxVCFL._SX466_.jpg",
+            "https://m.media-amazon.com/images/I/51w9FO595BL._SX466_.jpg"
+        ],
+        tag: "New Arrival",
+        desc: "Weight scales and medication misting machines.",
+        usage: "Nebulizer: Turns liquid medicine into a mist for inhalation."
+    },
+    {
+        id: 104,
+        gst: 18,
+        name: "DISPOSABLE PENCILS",
+        category: "Surgical",
+        price: 199.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/312HbI7SskL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/312HbI7SskL.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/9/342672201/AF/IL/US/274116/disposable-electrosurgical-pencil-500x500.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2025/6/522151309/SS/AL/XV/191022803/product-jpeg-500x500.jpg"
+        ],
+        tag: "Hospital Grade",
+        desc: "Disposable and reusable diathermy pens",
+        usage: "The pen used by a surgeon to apply electrical current for cutting."
+    },
+    {
+        id: 105,
+        gst: 12,
+        name: "REUSABLE PENCILS",
+        category: "Surgical",
+        price: 3999.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://3.imimg.com/data3/KV/AO/GLADMIN-114028/cautery-pencil-250x250.jpg",
+        images: [
+            "https://3.imimg.com/data3/KV/AO/GLADMIN-114028/cautery-pencil-250x250.jpg",
+            "https://3.imimg.com/data3/OS/FP/MY-13231461/electrosurgical-pencil-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/2/OP/MF/PI/3693372/hand-switch-pencil-250x250.jpg"
+        ],
+        tag: "Value Pack",
+        desc: "Disposable and reusable diathermy pens",
+        usage: "The pen  used by a surgeon to apply electrical current for cutting."
+    },
+    {
+        id: 106,
+        gst: 18,
+        name: "STETHOSCOPE",
+        category: "Diagnostics",
+        price: 1499.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/41i+zWBppZL._QL92_SH45_SS200_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/41i+zWBppZL._QL92_SH45_SS200_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/YX/SA/OG/34159551/revival-soundcraft-cardiology-stainless-steel-dual-head-stethoscope-250x250.png",
+            "https://5.imimg.com/data5/SELLER/Default/2021/8/GQ/DO/OH/87961419/mcp-pediatric-stainless-steel-cardiology-stethoscope-for-doctors-and-medical-students-500x500.jpg"
+        ],
+        tag: "Must Have",
+        desc: "Acoustic listening device.",
+        usage: "Used by doctors to listen to heart, lung, and bowel sounds."
+    },
+    {
+        id: 107,
+        gst: 5,
+        name: "DISPOSABLE PATIENT GOWN",
+        category: "PPE Kits",
+        price: 99.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/61Pm-7GzVCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61Pm-7GzVCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/7/VF/VL/XU/102240214/disposable-isolation-gown-500x500.jpg",
+            "https://opiamedical.com/upload/urunler/temp/tek-kullanimlik-pp-pe-onluk-972775_w500_.jpeg"
+        ],
+        tag: "Reliable",
+        desc: "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
+        usage: "Surgeon Gown: Sterile barrier used in the OT to prevent infection"
+    },
+    {
+        id: 108,
+        gst: 12,
+        name: "DISPOSABLE SURGEON GOWN WRAPPED AROUND (SMS) WITH WIPES- STERILE 50 GSM",
+        category: "PPE Kits",
+        price: 199.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://m.media-amazon.com/images/I/610a28-RcUL._AC_UF1000,1000_QL80_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/610a28-RcUL._AC_UF1000,1000_QL80_.jpg",
+            "https://ppedirectsales.com.au/wp-content/uploads/2020/12/Medical-Exam-Gown-Medical_%E5%89%AF%E6%9C%AC.jpg",
+            "https://www.medline.com.au/media/wysiwyg/gowns_2.png"
+        ],
+        tag: "Trending",
+        desc: "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
+        usage: "Surgeon Gown: Sterile barrier used in the OT to prevent infection"
+    },
+    {
+        id: 109,
+        gst: 5,
+        name: "BED SHEET WITH PILLOW COVER SMS NONWOVEN 85x63",
+        category: "PPE Kits",
+        price: 99.00,
+        oldPrice: 554.17,
+        discount: "28% OFF",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/10/458727664/DM/FF/BC/9024997/disposable-bedsheet-pillow-cover.png",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2024/10/458727664/DM/FF/BC/9024997/disposable-bedsheet-pillow-cover.png",
+            "https://5.imimg.com/data5/SELLER/Default/2024/8/444476497/QG/DU/RW/196571012/non-woven-bed-sheet.jpg",
+            "https://5.imimg.com/data5/IMOB/Default/2024/4/412931142/RT/TE/JW/425071/bedsheet-pillow-cover-1-1713930466735-jpeg.jpeg"
+        ],
+        tag: "Bulk Available",
+        desc: "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
+        usage: "Surgeon Gown: Sterile barrier used in the OT to prevent infection"
+    },
+    {
+        id: 110,
+        name: "PATIENT MONITORS",
+        category: "Diagnostics",
+        image: "https://m.media-amazon.com/images/I/71yCZzEcCoL.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/71yCZzEcCoL.jpg",
+            "https://5.imimg.com/data5/EU/EN/JP/SELLER-8668924/cardiac-monitor-1455678-500x500.jpg",
+            "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/10/Image_cardiac_monitor.jpg?t=1663141609"
+        ],
+        tag: "Must Have",
+        desc: "All-in-one vital sign displays (Edan).",
+        usage: "Placed bedside to track heart rate, BP, and oxygen 24/7."
+    },
+    {
+        id: 111,
+        name: "ECG MACHINES",
+        category: "Diagnostics",
+        image: "https://5.imimg.com/data5/SELLER/Default/2022/7/WY/ZT/AX/153996048/se-1200-express-2-1000x1000.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/WY/ZT/AX/153996048/se-1200-express-2-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/UX/RP/KC/153996048/se-1200-express-3-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/ZL/CH/KU/153996048/se-1200-express-1-1000x1000.jpg"
+        ],
+        tag: "Hospital Grade",
+        desc: "Multi-channel diagnostic recorders (Edan, Comen)",
+        usage: "Captures 12 heart views at once to diagnose heart attacks or issues."
+    },
+    {
+        id: 112,
+        name: "SYRINGE PUMP",
+        category: "Surgical",
+        image: "https://www.colmed.in/pub/media/catalog/product/cache/0b053d6a941a972e37b88f9ddcceee64/s/p/sp101.jpg",
+        images: [
+            "https://www.colmed.in/pub/media/catalog/product/cache/0b053d6a941a972e37b88f9ddcceee64/s/p/sp101.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/6/FH/QJ/VL/7649924/syringe-pump-250x250.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2025/5/508718943/BU/JR/RU/59315112/smith-medical-graseby-2000-syringe-pump.jpg"
+        ],
+        tag: "Premium Choice",
+        desc: "High-precision medication delivery (Smiths, Akas)",
+        usage: "Automatically pushes a syringe at a set rate (e.g., 2 ml/hr)."
+    },
+    {
+        id: 113,
+        name: "INFUSION PUMP",
+        category: "Surgical",
+        image: "https://ik.imagekit.io/z6mqjyyzz/media/public/3cf3bee156544fc98_graseby-1200-smiths-medical_1_.jpg?tr=w-1000,q-75,f-avif",
+        images: [
+            "https://ik.imagekit.io/z6mqjyyzz/media/public/3cf3bee156544fc98_graseby-1200-smiths-medical_1_.jpg?tr=w-1000,q-75,f-avif",
+            "https://ik.imagekit.io/z6mqjyyzz/media/public/7146775f126a4b01a_1_Smiths_Medical_Graseby_1200_Infusion_Pump.jpg?tr=w-1000,q-75,f-avif",
+            "https://www.kogland.com/media/catalog/product/cache/4cdd763f084f8373fbbe31a286a3669c/i/n/infusion_pump_1200_graseby.jpg"
+        ],
+        tag: "Reliable",
+        desc: "High-volume fluid delivery (Smiths, Akas).",
+        usage: "Regulates the flow of IV fluids or nutrition from a bag."
+    },
+    {
+        id: 114,
+        name: "SUCTION APPARATUS",
+        category: "Surgical",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/1/AH/MF/WO/29714077/hospital-suction-apparatus.png",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/1/AH/MF/WO/29714077/hospital-suction-apparatus.png",
+            "https://5.imimg.com/data5/UJ/DU/UI/SELLER-5714619/venky-suction-apparatus-500x500.jpg",
+            "https://4.imimg.com/data4/NH/PH/MY-15195878/venky-suction-apparatus.jpg"
+        ],
+        tag: "Best Value",
+        desc: "Medical vacuum machines (Venky, Yuwell).",
+        usage: "Used to suck out mucus, blood, or fluids from a patient's airway."
+    },
+    {
+        id: 115,
+        name: "FETAL DOPPLER",
+        category: "Diagnostics",
+        image: "https://m.media-amazon.com/images/I/513GsXOT9+L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID4zMDA8L3NwYW4+,500,900,420,420,0,0_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/513GsXOT9+L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID4zMDA8L3NwYW4+,500,900,420,420,0,0_QL100_.jpg",
+            "https://m.media-amazon.com/images/I/61Ymu3i3+4L._AC_UF350,350_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/71V65d2cQzL.jpg"
+        ],
+        tag: "Fast Delivery",
+        desc: "Handheld heart rate detector (BPL, Dr Trust).",
+        usage: "Uses ultrasound to let doctors and parents hear the baby's heartbeat."
+    },
+    {
+        id: 116,
+        name: "CTG MACHINE",
+        category: "Diagnostics",
+        image: "https://m.media-amazon.com/images/I/61nZrNddywL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        images: [
+            "https://m.media-amazon.com/images/I/61nZrNddywL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/5/XP/DV/PX/2776178/fetal-monitor-500x500.jpeg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/10/357328902/EL/LK/SU/12824114/bistos-bt-350-fetal-monitor.jpg"
+        ],
+        tag: "Must Have",
+        desc: "Fetal heart and contraction monitor (Contec, Edan).",
+        usage: "Monitors the baby’s stress levels during pregnancy or labor."
+    },
+    {
+        id: 117,
+        name: "AED MACHINE",
+        category: "First Aid",
+        image: "https://in.nihonkohden.com/sites/in/files/2023-08/main_cardiolife-aed-3100_01.webp",
+        images: [
+            "https://in.nihonkohden.com/sites/in/files/2023-08/main_cardiolife-aed-3100_01.webp",
+            "https://respbuy.com/wp-content/uploads/2025/01/RespBuy-Nihon-Kohdon-AED-3100_carrybag.png",
+            "https://eu.nihonkohden.com/media/1xbm1C86/cardiolife-AED-3100_open.png"
+        ],
+        tag: "High Quality",
+        desc: "Automated External Defibrillator (Nihon Kohden)",
+        usage: "Portable device that talks to the user to guide them through saving a heart attack victim."
+    },
+    {
+        id: 118,
+        name: "DEFIBRILLATOR",
+        category: "First Aid",
+        image: "https://bzbddujafhhdrbcrvadc.supabase.co/storage/v1/object/public/s3.neogenesis.dewonderstruck.com/846a051b-f148-4d26-b6d0-ac761c1bdebe.jpg",
+        images: [
+            "https://bzbddujafhhdrbcrvadc.supabase.co/storage/v1/object/public/s3.neogenesis.dewonderstruck.com/846a051b-f148-4d26-b6d0-ac761c1bdebe.jpg",
+            "https://i.ytimg.com/vi/rpfCRka5l3U/hqdefault.jpg",
+            "https://i.ytimg.com/vi/NLWhozgVcgY/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgUShFMA8=&rs=AOn4CLCewns_njnoFOrLZLgJhtySIEieNA"
+        ],
+        tag: "Award Winner",
+        desc: "Professional heart-shocking device (Nihon Kohden).",
+        usage: "Used by doctors to deliver a calculated shock to stop life-threatening rhythms"
+    },
+    {
+        id: 119,
+        name: "FLUID/BLOOD WARMER",
+        category: "Surgical",
+        image: "https://static.wixstatic.com/media/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp/v1/fill/w_600,h_600,al_c,lg_1,q_80,enc_avif,quality_auto/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp",
+        images: [
+            "https://static.wixstatic.com/media/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp/v1/fill/w_600,h_600,al_c,lg_1,q_80,enc_avif,quality_auto/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp",
+            "https://www.icumed.com/media/ygipnt1s/hotline-blood-and-fluid-warmer_02.jpg?format=webp",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvtyCwym5DWSxRKuJwcuKTZaXq_yoHH6Igxs67qptbkUD95xJCxrVUloFLWT8ulogqH6U&usqp=CAU"
+        ],
+        tag: "Trending",
+        desc: "In-line heating device (Smiths, BPL).",
+        usage: "Warms cold IV fluids or blood to body temperature before they enter the patient."
+    },
+    {
+        id: 120,
+        name: "BLANKET WARMER",
+        category: "Surgical",
+        image: "https://ik.imagekit.io/z6mqjyyzz/media/public/150518fb916348f19_image.png?tr=w-1000,q-75,f-avif",
+        images: [
+            "https://ik.imagekit.io/z6mqjyyzz/media/public/150518fb916348f19_image.png?tr=w-1000,q-75,f-avif",
+            "https://ik.imagekit.io/z6mqjyyzz/media/public/56e06dea1f67478da_image.png?tr=w-1000,q-75,f-avif",
+            "https://ik.imagekit.io/z6mqjyyzz/media/public/62075634e1ae4fd69_image.png?tr=w-1000,q-75,f-avif"
+        ],
+        tag: "High Quality",
+        desc: "Warming cabinet (IOB, ABM).",
+        usage: "Keeps hospital blankets at a set heat to treat or prevent hypothermia."
+    },
+    {
+        id: 121,
+        name: "KEY PADS",
+        category: "Surgical",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/9/341634295/XU/EZ/EF/19505317/flexible-membrane-keypad-1000x1000.jpg",
+        images: [
+            "https://5.imimg.com/data5/SELLER/Default/2023/9/341634295/XU/EZ/EF/19505317/flexible-membrane-keypad-1000x1000.jpg"
+        ],
+        tag: "Bulk Available",
+        desc: "Replacement interfaces for medical pumps/monitors.",
+        usage: "Replaces worn-out buttons on equipment so they remain sterile and functional."
+    },
+];
+

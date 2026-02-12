@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.D SINGLE LINE - Wilson Health Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #1e3a8a;
+            --accent: #22c55e;
+            --bg-light: #f0f9ff;
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; padding-top: 80px; }
+        
+        nav { background: var(--white); padding: 0.8rem 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--primary); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .brand { color: var(--primary); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; }
+        .logo-text .sub-brand { color: var(--secondary); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; }
+        
+        .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-btn { color: var(--secondary); font-size: 1.3rem; text-decoration: none; position: relative; transition: var(--transition); }
+        .nav-btn:hover { color: var(--primary); transform: translateY(-2px); }
+        .badge { position: absolute; top: -8px; right: -10px; background: var(--primary); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; font-weight: 700; }
+        
+        .product-container { max-width: 1300px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 100px 500px 1fr 300px; gap: 30px; }
+        @media (max-width: 1200px) { .product-container { grid-template-columns: 100px 450px 1fr; } .buy-box { position: static; grid-column: 1 / -1; } }
+        @media (max-width: 900px) { .product-container { grid-template-columns: 1fr; } .thumb-strip { display: none; } }
+        
+        .thumb-strip { display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; scrollbar-width: none; }
+        .thumb-strip::-webkit-scrollbar { display: none; }
+        .thumb { width: 70px; height: 70px; border: 2px solid var(--border); border-radius: 10px; padding: 5px; cursor: pointer; transition: var(--transition); background: white; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
+        .thumb img { width: 100%; height: 100%; object-fit: contain; }
+        
+        .main-img-box { position: sticky; top: 100px; background: white; border-radius: 20px; height: 500px; display: flex; align-items: center; justify-content: center; padding: 20px; box-shadow: var(--shadow); }
+        .main-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .details-box { padding: 0 10px; }
+        .cat-tag { display: inline-block; padding: 4px 12px; background: rgba(14, 165, 233, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .p-title { font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem; line-height: 1.2; }
+        .rating-box { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+        .stars { color: #fbbf24; }
+        
+        .price-area { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 2rem; border-left: 4px solid var(--primary); }
+        .discount-row { color: #ef4444; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .p-price { font-size: 2.5rem; font-weight: 800; color: var(--secondary); display: flex; align-items: baseline; gap: 5px; }
+        .p-price span { font-size: 1.2rem; font-weight: 600; color: var(--primary); }
+        .mrp-row { color: var(--text-light); text-decoration: line-through; font-size: 1rem; }
+        
+        .buy-box { border: 2px solid var(--border); border-radius: 20px; padding: 25px; height: fit-content; position: sticky; top: 100px; background: white; box-shadow: var(--shadow); }
+        .status-stock { color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+        .qty-row { margin-bottom: 1.5rem; }
+        .qty-btn-box { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 12px; width: fit-content; overflow: hidden; }
+        .qty-btn { padding: 8px 15px; background: none; border: none; cursor: pointer; font-weight: 800; transition: var(--transition); }
+        .qty-btn:hover { background: var(--bg-light); }
+        .qty-val { padding: 0 15px; font-weight: 700; }
+        
+        .action-btns { display: flex; flex-direction: column; gap: 12px; }
+        .btn { border: none; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: var(--transition); font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-cart { background: var(--secondary); color: white; }
+        .btn-cart:hover { transform: scale(1.02); background: #162e70; }
+        .btn-buy { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2); }
+        .btn-buy:hover { transform: scale(1.02); background: var(--primary-dark); }
+        .btn-wish { background: white; border: 2px solid var(--border); color: var(--secondary); }
+        .btn-wish.active { border-color: #ef4444; color: #ef4444; }
+        
+        .p-tabs { margin-top: 2rem; }
+        .tab-nav { display: flex; gap: 2rem; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
+        .tab-item { padding: 10px 0; cursor: pointer; font-weight: 700; color: var(--text-light); position: relative; }
+        .tab-item.active { color: var(--primary); }
+        .tab-item.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--primary); }
+        .tab-pane { display: none; font-size: 0.95rem; color: #4b5563; }
+        .tab-pane.active { display: block; }
+        
+        .toast { position: fixed; bottom: 30px; right: 30px; background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: translateY(120%); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10000; }
+        .toast.show { transform: translateY(0); }
+        
+        footer { background: var(--secondary); color: white; padding: 4rem 5% 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Wilson Logo">
+            <div class="logo-text">
+                <span class="brand">WILSON</span>
+                <span class="sub-brand">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="index.html#open-cart" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="index.html#wishlist" class="nav-btn"><i class="fas fa-heart"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="thumb-strip" id="thumb-strip">
+            <!-- Thumbs injected here -->
+        </div>
+        <div class="main-img-box">
+            <img id="main-product-img" src="https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42" alt="B.D SINGLE LINE">
+        </div>
+        <div class="details-box">
+            <span class="cat-tag">Surgical</span>
+            <h1 class="p-title">B.D SINGLE LINE</h1>
+            <div class="rating-box">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <span style="color: var(--text-light); font-size: 0.85rem;">(450+ Verified Reviews)</span>
+            </div>
+            
+            <div class="price-area">
+                <div class="discount-row">Special Discount -28% OFF</div>
+                <div class="p-price"><span>₹</span>849.00</div>
+                <div class="mrp-row">M.R.P.: ₹1,179.17</div>
+                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 10px;">Price inclusive of all taxes, GST 12%</p>
+            </div>
+
+            <div class="p-tabs">
+                <div class="tab-nav">
+                    <div class="tab-item active" onclick="switchTab(event, 'desc-pane')">Description</div>
+                    <div class="tab-item" onclick="switchTab(event, 'usage-pane')">How to Use</div>
+                </div>
+                <div id="desc-pane" class="tab-pane active">
+                    <p>Invasive pressure cables and disposable transducer lines.</p>
+                </div>
+                <div id="usage-pane" class="tab-pane">
+                    <p>Connected to an arterial catheter for constant, \</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buy-box">
+            <div class="status-stock"><i class="fas fa-check-circle"></i> In Stock & Ready to Ship</div>
+            <div class="qty-row">
+                <p style="font-size: 0.85rem; margin-bottom: 8px; font-weight: 700;">Quantity</p>
+                <div class="qty-btn-box">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <span class="qty-val" id="qty-display">1</span>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <button class="btn btn-buy" onclick="buyNow()"><i class="fas fa-bolt"></i> Buy Now</button>
+                <button class="btn btn-wish" id="wish-btn" onclick="toggleWishlist()"><i class="far fa-heart"></i> Add to Wishlist</button>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: var(--text-light); display: flex; gap: 8px;">
+                    <i class="fas fa-truck" style="color: var(--primary);"></i> Express 1-Day Delivery in Hyderabad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Item added successfully!</div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Wilson Health Care</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;">India's leading provider of certified medical equipment and professional healthcare services.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: #475569; font-size: 0.8rem;">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const product = {
+            id: 30,
+            name: "B.D SINGLE LINE",
+            price: 849.0,
+            image: "https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42",
+            category: "Surgical",
+            images: ["https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42"]
+        };
+
+        const thumbStrip = document.getElementById('thumb-strip');
+        if (product.images && product.images.length > 0) {
+            thumbStrip.innerHTML = product.images.map((img, i) => `
+                <div class="thumb ${i === 0 ? 'active' : ''}" onmouseover="changeMainImg(this, '${img}')">
+                    <img src="${img}" alt="Thumb ${i}">
+                </div>
+            `).join('');
+        }
+
+        function changeMainImg(el, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        let quantity = 1;
+        function updateQty(delta) {
+            quantity = Math.max(1, quantity + delta);
+            document.getElementById('qty-display').innerText = quantity;
+        }
+
+        function switchTab(evt, paneId) {
+            document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+            document.getElementById(paneId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        function updateBadge() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        function addToCart() {
+            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            if (!user) { alert("Please login on the home page first"); window.location.href = 'index.html'; return; }
+            
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(i => i.id === product.id);
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push({ ...product, quantity: quantity, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            showToast("Item added to cart!");
+            updateBadge();
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location.href = 'index.html#open-cart';
+        }
+
+        function toggleWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            const idx = wishlist.findIndex(id => id === product.id);
+            const btn = document.getElementById('wish-btn');
+            
+            if (idx > -1) {
+                wishlist.splice(idx, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+                showToast("Removed from wishlist");
+            } else {
+                wishlist.push(product.id);
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+                showToast("Added to wishlist!");
+            }
+            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+        }
+
+        function checkWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            if (wishlist.includes(product.id)) {
+                const btn = document.getElementById('wish-btn');
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+            }
+        }
+
+        // Init
+        updateBadge();
+        checkWishlist();
+    </script>
+</body>
+</html>

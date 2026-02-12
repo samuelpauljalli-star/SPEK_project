@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXYGEN HOOD - Wilson Health Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #1e3a8a;
+            --accent: #22c55e;
+            --bg-light: #f0f9ff;
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; padding-top: 80px; }
+        
+        nav { background: var(--white); padding: 0.8rem 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--primary); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .brand { color: var(--primary); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; }
+        .logo-text .sub-brand { color: var(--secondary); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; }
+        
+        .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-btn { color: var(--secondary); font-size: 1.3rem; text-decoration: none; position: relative; transition: var(--transition); }
+        .nav-btn:hover { color: var(--primary); transform: translateY(-2px); }
+        .badge { position: absolute; top: -8px; right: -10px; background: var(--primary); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; font-weight: 700; }
+        
+        .product-container { max-width: 1300px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 100px 500px 1fr 300px; gap: 30px; }
+        @media (max-width: 1200px) { .product-container { grid-template-columns: 100px 450px 1fr; } .buy-box { position: static; grid-column: 1 / -1; } }
+        @media (max-width: 900px) { .product-container { grid-template-columns: 1fr; } .thumb-strip { display: none; } }
+        
+        .thumb-strip { display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; scrollbar-width: none; }
+        .thumb-strip::-webkit-scrollbar { display: none; }
+        .thumb { width: 70px; height: 70px; border: 2px solid var(--border); border-radius: 10px; padding: 5px; cursor: pointer; transition: var(--transition); background: white; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
+        .thumb img { width: 100%; height: 100%; object-fit: contain; }
+        
+        .main-img-box { position: sticky; top: 100px; background: white; border-radius: 20px; height: 500px; display: flex; align-items: center; justify-content: center; padding: 20px; box-shadow: var(--shadow); }
+        .main-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .details-box { padding: 0 10px; }
+        .cat-tag { display: inline-block; padding: 4px 12px; background: rgba(14, 165, 233, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .p-title { font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem; line-height: 1.2; }
+        .rating-box { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+        .stars { color: #fbbf24; }
+        
+        .price-area { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 2rem; border-left: 4px solid var(--primary); }
+        .discount-row { color: #ef4444; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .p-price { font-size: 2.5rem; font-weight: 800; color: var(--secondary); display: flex; align-items: baseline; gap: 5px; }
+        .p-price span { font-size: 1.2rem; font-weight: 600; color: var(--primary); }
+        .mrp-row { color: var(--text-light); text-decoration: line-through; font-size: 1rem; }
+        
+        .buy-box { border: 2px solid var(--border); border-radius: 20px; padding: 25px; height: fit-content; position: sticky; top: 100px; background: white; box-shadow: var(--shadow); }
+        .status-stock { color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+        .qty-row { margin-bottom: 1.5rem; }
+        .qty-btn-box { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 12px; width: fit-content; overflow: hidden; }
+        .qty-btn { padding: 8px 15px; background: none; border: none; cursor: pointer; font-weight: 800; transition: var(--transition); }
+        .qty-btn:hover { background: var(--bg-light); }
+        .qty-val { padding: 0 15px; font-weight: 700; }
+        
+        .action-btns { display: flex; flex-direction: column; gap: 12px; }
+        .btn { border: none; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: var(--transition); font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-cart { background: var(--secondary); color: white; }
+        .btn-cart:hover { transform: scale(1.02); background: #162e70; }
+        .btn-buy { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2); }
+        .btn-buy:hover { transform: scale(1.02); background: var(--primary-dark); }
+        .btn-wish { background: white; border: 2px solid var(--border); color: var(--secondary); }
+        .btn-wish.active { border-color: #ef4444; color: #ef4444; }
+        
+        .p-tabs { margin-top: 2rem; }
+        .tab-nav { display: flex; gap: 2rem; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
+        .tab-item { padding: 10px 0; cursor: pointer; font-weight: 700; color: var(--text-light); position: relative; }
+        .tab-item.active { color: var(--primary); }
+        .tab-item.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--primary); }
+        .tab-pane { display: none; font-size: 0.95rem; color: #4b5563; }
+        .tab-pane.active { display: block; }
+        
+        .toast { position: fixed; bottom: 30px; right: 30px; background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: translateY(120%); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10000; }
+        .toast.show { transform: translateY(0); }
+        
+        footer { background: var(--secondary); color: white; padding: 4rem 5% 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Wilson Logo">
+            <div class="logo-text">
+                <span class="brand">WILSON</span>
+                <span class="sub-brand">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="index.html#open-cart" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="index.html#wishlist" class="nav-btn"><i class="fas fa-heart"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="thumb-strip" id="thumb-strip">
+            <!-- Thumbs injected here -->
+        </div>
+        <div class="main-img-box">
+            <img id="main-product-img" src="https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg" alt="OXYGEN HOOD">
+        </div>
+        <div class="details-box">
+            <span class="cat-tag">First Aid</span>
+            <h1 class="p-title">OXYGEN HOOD</h1>
+            <div class="rating-box">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <span style="color: var(--text-light); font-size: 0.85rem;">(450+ Verified Reviews)</span>
+            </div>
+            
+            <div class="price-area">
+                <div class="discount-row">Special Discount -28% OFF</div>
+                <div class="p-price"><span>₹</span>1,999.00</div>
+                <div class="mrp-row">M.R.P.: ₹2,776.39</div>
+                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 10px;">Price inclusive of all taxes, GST 12%</p>
+            </div>
+
+            <div class="p-tabs">
+                <div class="tab-nav">
+                    <div class="tab-item active" onclick="switchTab(event, 'desc-pane')">Description</div>
+                    <div class="tab-item" onclick="switchTab(event, 'usage-pane')">How to Use</div>
+                </div>
+                <div id="desc-pane" class="tab-pane active">
+                    <p>A clear dome used for infants.</p>
+                </div>
+                <div id="usage-pane" class="tab-pane">
+                    <p>Placed over a baby's head to deliver a high-oxygen environment without a mask.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buy-box">
+            <div class="status-stock"><i class="fas fa-check-circle"></i> In Stock & Ready to Ship</div>
+            <div class="qty-row">
+                <p style="font-size: 0.85rem; margin-bottom: 8px; font-weight: 700;">Quantity</p>
+                <div class="qty-btn-box">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <span class="qty-val" id="qty-display">1</span>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                <button class="btn btn-buy" onclick="buyNow()"><i class="fas fa-bolt"></i> Buy Now</button>
+                <button class="btn btn-wish" id="wish-btn" onclick="toggleWishlist()"><i class="far fa-heart"></i> Add to Wishlist</button>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: var(--text-light); display: flex; gap: 8px;">
+                    <i class="fas fa-truck" style="color: var(--primary);"></i> Express 1-Day Delivery in Hyderabad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Item added successfully!</div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Wilson Health Care</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;">India's leading provider of certified medical equipment and professional healthcare services.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: #475569; font-size: 0.8rem;">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const product = {
+            id: 39,
+            name: "OXYGEN HOOD",
+            price: 1999.0,
+            image: "https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg",
+            category: "First Aid",
+            images: ["https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg", "https://tiimg.tistatic.com/fp/1/004/149/infant-oxygen-hood-374.jpg", "data:image/jpeg;base64,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"]
+        };
+
+        const thumbStrip = document.getElementById('thumb-strip');
+        if (product.images && product.images.length > 0) {
+            thumbStrip.innerHTML = product.images.map((img, i) => `
+                <div class="thumb ${i === 0 ? 'active' : ''}" onmouseover="changeMainImg(this, '${img}')">
+                    <img src="${img}" alt="Thumb ${i}">
+                </div>
+            `).join('');
+        }
+
+        function changeMainImg(el, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        let quantity = 1;
+        function updateQty(delta) {
+            quantity = Math.max(1, quantity + delta);
+            document.getElementById('qty-display').innerText = quantity;
+        }
+
+        function switchTab(evt, paneId) {
+            document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+            document.getElementById(paneId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        function updateBadge() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        function addToCart() {
+            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            if (!user) { alert("Please login on the home page first"); window.location.href = 'index.html'; return; }
+            
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(i => i.id === product.id);
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push({ ...product, quantity: quantity, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            showToast("Item added to cart!");
+            updateBadge();
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location.href = 'index.html#open-cart';
+        }
+
+        function toggleWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            const idx = wishlist.findIndex(id => id === product.id);
+            const btn = document.getElementById('wish-btn');
+            
+            if (idx > -1) {
+                wishlist.splice(idx, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+                showToast("Removed from wishlist");
+            } else {
+                wishlist.push(product.id);
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+                showToast("Added to wishlist!");
+            }
+            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+        }
+
+        function checkWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            if (wishlist.includes(product.id)) {
+                const btn = document.getElementById('wish-btn');
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
+            }
+        }
+
+        // Init
+        updateBadge();
+        checkWishlist();
+    </script>
+</body>
+</html>
