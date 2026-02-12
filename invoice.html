@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Items | Wilson Health Care</title>
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <title>Order Items | SPEK Health Care</title>
+    <link rel="icon" type="image/jpg" href="spek_logo_green_white.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -229,7 +229,7 @@
         function loadInvoice() {
             const params = new URLSearchParams(window.location.search);
             const orderId = params.get('id');
-            const orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+            const orders = JSON.parse(localStorage.getItem('SPEK-orders')) || [];
             const order = orders.find(o => o.orderId === orderId);
             const container = document.getElementById('invoice');
 
@@ -252,7 +252,7 @@
             container.innerHTML = `
                 <div class="header">
                     <div class="logo-area">
-                        <img src="logo.jpg" alt="Wilson Logo" onerror="this.src='https://via.placeholder.com/60'">
+                        <img src="spek_logo_green_white.svg" alt="SPEK Logo" onerror="this.src='https://via.placeholder.com/60'">
                         <div class="company-info">
                             <h1>SPEK HEALTH CARE</h1>
                             <p>Premium Medical Equipment Provider</p>

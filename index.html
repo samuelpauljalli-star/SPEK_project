@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPEK HEALTH CARE | Premium Medical Equipment</title>
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="icon" type="image/jpg" href="spek_logo_green_white.svg">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0d9488">
     <meta name="description"
@@ -59,8 +59,8 @@
     </script>
     <style>
         :root {
-            --primary: #0d9488;
-            --primary-dark: #0f766e;
+            --primary: #10b981;
+            --primary-dark: #059669;
             --secondary: #1e293b;
             --accent: #10b981;
             --bg-light: #f0fdfa;
@@ -1298,7 +1298,7 @@
         }
 
         @media (max-width: 480px) {
-            .logo .brand-wilson {
+            .logo .brand-SPEK {
                 font-size: 1.2rem;
             }
 
@@ -1566,7 +1566,7 @@
 <div id="pwa-install-bar"
     style="display: none; background: var(--secondary); color: white; padding: 10px 5%; text-align: center; font-size: 0.9rem; position: fixed; top: 0; width: 100%; z-index: 10001; animation: slideDown 0.5s ease;">
     <i class="fas fa-mobile-alt" style="margin-right: 10px;"></i>
-    Install Wilson Health Care App for a better experience!
+    Install SPEK Health Care App for a better experience!
     <button onclick="installApp()"
         style="background: var(--accent); color: white; border: none; padding: 5px 15px; border-radius: 20px; font-weight: 700; margin-left: 15px; cursor: pointer;">Install
         Now</button>
@@ -1586,7 +1586,7 @@
     </div>
     <div class="chat-window" id="chat-window">
         <div class="chat-header">
-            <span>Wilson Support</span>
+            <span>SPEK Support</span>
             <i class="fas fa-times" onclick="toggleChat()" style="cursor: pointer;"></i>
         </div>
         <div class="chat-messages" id="chat-messages">
@@ -1907,7 +1907,7 @@
 <div class="modal-overlay" id="about-modal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2>About Wilson Health Care</h2>
+            <h2>About SPEK Health Care</h2>
             <button class="close-btn" onclick="closeModal('about')">&times;</button>
         </div>
         <div class="modal-items" style="padding-right: 10px;">
@@ -1915,9 +1915,9 @@
                 style="margin-bottom: 2rem; border-left: 4px solid var(--primary); padding-left: 1.5rem;">
                 <h3
                     style="color: var(--primary); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
-                    About Wilson Health Care</h3>
+                    About SPEK Health Care</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
-                    Wilson Health Care is a trusted supplier of high-quality medical equipment to hospitals,
+                    SPEK Health Care is a trusted supplier of high-quality medical equipment to hospitals,
                     clinics, and healthcare facilities. We are committed to supporting healthcare professionals by
                     providing reliable products that meet industry standards and improve patient care.
                 </p>
@@ -1935,12 +1935,12 @@
                     style="color: var(--accent); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
                     Our Commitment</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
-                    At Wilson Health Care, quality, reliability, and customer trust are at the core of everything we
+                    At SPEK Health Care, quality, reliability, and customer trust are at the core of everything we
                     do. Our goal is to build long-term partnerships with healthcare providers by offering dependable
                     products, competitive pricing, and responsive service.
                 </p>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-top: 1rem;">
-                    Wilson Health Care specializes in supplying high-quality medical equipment to hospitals and
+                    SPEK Health Care specializes in supplying high-quality medical equipment to hospitals and
                     healthcare institutions. We are dedicated to delivering reliable products with warranty support,
                     fast service, and prompt customer response, ensuring confidence and satisfaction for our
                     clients.
@@ -1953,7 +1953,7 @@
                     style="color: var(--primary); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
                     Our Legacy</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
-                    While our brand name Wilson Health Care is fresh, our background is solid. We have successfully
+                    While our brand name SPEK Health Care is fresh, our background is solid. We have successfully
                     operated for over 7 years as Peripheral Healing Systems in Vijayawada, bringing years of
                     clinical insight and technical expertise to our current operations.
                 </p>
@@ -4102,7 +4102,7 @@
             ],
             tag: "Must Have",
             desc: "Fetal heart and contraction monitor (Contec, Edan).",
-            usage: "Monitors the baby’s stress levels during pregnancy or labor."
+            usage: "Monitors the baby�s stress levels during pregnancy or labor."
         },
         {
             id: 117,
@@ -4175,10 +4175,10 @@
     ]; */
 
 
-    let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
-    let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
-    let orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
-    let currentUser = JSON.parse(localStorage.getItem('wilson-user')) || null;
+    let cart = JSON.parse(localStorage.getItem('SPEK-cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('SPEK-wishlist')) || [];
+    let orders = JSON.parse(localStorage.getItem('SPEK-orders')) || [];
+    let currentUser = JSON.parse(localStorage.getItem('SPEK-user')) || null;
     let currentCategory = 'All';
 
     // Add ratings to products if not present
@@ -4220,8 +4220,8 @@
         }
 
         // Check for Buy Now from subpage
-        if (localStorage.getItem('wilson-auto-checkout') === 'true') {
-            localStorage.removeItem('wilson-auto-checkout');
+        if (localStorage.getItem('SPEK-auto-checkout') === 'true') {
+            localStorage.removeItem('SPEK-auto-checkout');
             openModal('cart');
             checkout();
         }
@@ -4281,13 +4281,13 @@
         }
 
         // Simple simulation of an "Identity Provider"
-        let usersDB = JSON.parse(localStorage.getItem('wilson-users-db')) || {};
+        let usersDB = JSON.parse(localStorage.getItem('SPEK-users-db')) || {};
 
         if (usersDB[email]) {
             // User exists, check password
             if (usersDB[email].password === password) {
                 currentUser = usersDB[email];
-                localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+                localStorage.setItem('SPEK-user', JSON.stringify(currentUser));
                 showToast(`Welcome back, ${currentUser.name}!`);
                 checkUserStatus();
                 closeModal('login');
@@ -4303,10 +4303,10 @@
                 mobile: '', hno: '', street: '', landmark: '', pincode: '', district: '', state: ''
             };
             usersDB[email] = newUser;
-            localStorage.setItem('wilson-users-db', JSON.stringify(usersDB));
+            localStorage.setItem('SPEK-users-db', JSON.stringify(usersDB));
 
             currentUser = newUser;
-            localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+            localStorage.setItem('SPEK-user', JSON.stringify(currentUser));
             showToast(`Account created! Welcome, ${currentUser.name}!`);
             checkUserStatus();
             closeModal('login');
@@ -4344,7 +4344,7 @@
                     </div>
                     <div class="form-group" style="margin-bottom: 1.5rem;">
                         <label style="font-size: 0.85rem; color: var(--secondary);">Password</label>
-                        <input type="password" id="login-password" placeholder="••••••••" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.95rem;">
+                        <input type="password" id="login-password" placeholder="��������" required style="width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.95rem;">
                     </div>
                     <button type="submit" class="checkout-btn">
                         Login / Create Account
@@ -4359,7 +4359,7 @@
 
     function logout() {
         currentUser = null;
-        localStorage.removeItem('wilson-user');
+        localStorage.removeItem('SPEK-user');
         checkUserStatus();
         closeModal('login');
         showToast('Logged out successfully');
@@ -4507,7 +4507,7 @@
                 profileDisplay.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">`;
                 currentUser.profilePic = e.target.result;
                 // Auto-save pic immediately
-                localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+                localStorage.setItem('SPEK-user', JSON.stringify(currentUser));
                 showToast("Profile Picture Updated!");
             };
             reader.readAsDataURL(input.files[0]);
@@ -4554,7 +4554,7 @@
         currentUser.state = document.getElementById('prof-state').value;
         currentUser.country = document.getElementById('prof-country').value;
 
-        localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+        localStorage.setItem('SPEK-user', JSON.stringify(currentUser));
         showToast("Profile Updated!");
         checkUserStatus();
         renderUserProfile();
@@ -4589,7 +4589,7 @@
                 mobile: '',
                 profilePic: '' // user can upload later
             };
-            localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+            localStorage.setItem('SPEK-user', JSON.stringify(currentUser));
             showToast("Logged in with Google!");
             checkUserStatus();
             closeModal('login');
@@ -4640,14 +4640,14 @@
             botResponse = 'You can click on any product card to see full specifications, images, and usage guides.';
         } else if (typeOrText === 'contact') {
             userText = 'Contact Support';
-            botResponse = 'Our support team is available at +91 70326 87122 or via email: support@wilsonhealthcare.com';
+            botResponse = 'Our support team is available at +91 70326 87122 or via email: support@SPEKhealthcare.com';
         } else {
             // Manual text input
             userText = typeOrText;
             const query = typeOrText.toLowerCase();
 
             if (query.includes('hello') || query.includes('hi')) {
-                botResponse = "Hello! How can Wilson Health Care assist you today?";
+                botResponse = "Hello! How can SPEK Health Care assist you today?";
             } else if (query.includes('price') || query.includes('cost')) {
                 botResponse = "Prices are listed on each product card. We offer special discounts for bulk hospital orders!";
             } else {
@@ -4754,8 +4754,8 @@
                         </div>
                         ${p.price ? `
                         <div class="product-price">
-                            <span class="current-price">₹${p.price.toLocaleString('en-IN')}</span>
-                            ${p.oldPrice ? `<span class="old-price">₹${p.oldPrice.toLocaleString('en-IN')}</span>` : ''}
+                            <span class="current-price">?${p.price.toLocaleString('en-IN')}</span>
+                            ${p.oldPrice ? `<span class="old-price">?${p.oldPrice.toLocaleString('en-IN')}</span>` : ''}
                         </div>` : ''}
                         <div class="product-actions" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
                             <button class="add-cart-btn" style="flex: 1; padding: 0.5rem; font-size: 0.8rem;" onclick="addToCart(${p.id})">
@@ -4788,18 +4788,18 @@
     }
 
     function addToRecentlyViewed(id) {
-        let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+        let rv = JSON.parse(localStorage.getItem('SPEK-rv')) || [];
         rv = rv.filter(itemId => itemId !== id);
         rv.unshift(id);
         rv = rv.slice(0, 10); // Keep last 10
-        localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        localStorage.setItem('SPEK-rv', JSON.stringify(rv));
         renderRecentlyViewed();
     }
 
     function renderRecentlyViewed() {
         const container = document.getElementById('recently-viewed-section');
         const track = document.getElementById('rv-track');
-        const rvIds = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+        const rvIds = JSON.parse(localStorage.getItem('SPEK-rv')) || [];
 
         if (rvIds.length === 0) {
             container.style.display = 'none';
@@ -4817,7 +4817,7 @@
                     <img src="${p.image}" alt="${p.name}">
                     <div class="rv-item-info">
                         <div class="rv-item-name">${p.name}</div>
-                        <div class="rv-item-price">₹${p.price.toLocaleString('en-IN')}</div>
+                        <div class="rv-item-price">?${p.price.toLocaleString('en-IN')}</div>
                     </div>
                 </div>
             `).join('');
@@ -4907,7 +4907,7 @@
         const container = document.getElementById('cart-items');
         if (cart.length === 0) {
             container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your cart is empty.</p>';
-            document.getElementById('cart-total') ? document.getElementById('cart-total').innerText = '₹0.00' : null;
+            document.getElementById('cart-total') ? document.getElementById('cart-total').innerText = '?0.00' : null;
             return;
         }
         container.innerHTML = cart.map(item => `
@@ -4915,7 +4915,7 @@
                     <img src="${item.image}" alt="${item.name}">
                     <div class="cart-item-info">
                         <div class="cart-item-title">${item.name}</div>
-                        <div class="cart-item-price">${item.price ? '₹' + item.price.toLocaleString('en-IN') : 'Price on Request'}</div>
+                        <div class="cart-item-price">${item.price ? '?' + item.price.toLocaleString('en-IN') : 'Price on Request'}</div>
                         <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
                             <button onclick="changeQuantity(${item.cartId}, -1)" style="width: 25px; height: 25px; border-radius: 50%; border: 1px solid #e2e8f0; background: white; cursor: pointer;">-</button>
                             <span style="font-weight: 600; font-size: 0.9rem;">${item.quantity || 1}</span>
@@ -4943,15 +4943,15 @@
         const summaryHTML = `
                 <div class="total-row">
                     <span>Subtotal:</span>
-                    <span>₹${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>?${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 <div class="total-row">
                     <span>Total GST:</span>
-                    <span>₹${totalTax.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>?${totalTax.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 <div class="grand-total-row">
                     <span>Grand Total:</span>
-                    <span>₹${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>?${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
             `;
 
@@ -4988,7 +4988,7 @@
                     <img src="${p.image}" alt="${p.name}">
                     <div class="cart-item-info">
                         <div class="cart-item-title">${p.name}</div>
-                        <div class="cart-item-price">${p.price ? '₹' + p.price.toLocaleString('en-IN') : 'Price on Request'}</div>
+                        <div class="cart-item-price">${p.price ? '?' + p.price.toLocaleString('en-IN') : 'Price on Request'}</div>
                     </div>
                     <div style="display: flex; gap: 8px;">
                         <button class="add-cart-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 8px;" onclick="addToCart(${p.id})">Add</button>
@@ -5027,7 +5027,7 @@
                     <img src="${item.image}" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                     <div style="flex: 1;">
                         <div style="font-size: 0.85rem; font-weight: 600; color: var(--secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;">${item.name}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-light);">Qty: ${item.quantity} × Rs ${item.price.toLocaleString('en-IN')}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-light);">Qty: ${item.quantity} � Rs ${item.price.toLocaleString('en-IN')}</div>
                     </div>
                 </div>
             `).join('');
@@ -5065,7 +5065,7 @@
         doc.setTextColor(255, 255, 255);
         doc.setFontSize(22);
         doc.setFont("helvetica", "bold");
-        doc.text("WILSON HEALTH CARE", 48, 22);
+        doc.text("SPEK HEALTH CARE", 48, 22);
         doc.setFontSize(10);
         doc.setFont("helvetica", "normal");
         doc.text("Premium Certified Medical Equipments Provider", 48, 29);
@@ -5148,7 +5148,7 @@
         doc.setFontSize(8);
         doc.setTextColor(100);
         doc.text("This is a computer generated invoice. No signature required.", 105, 275, { align: "center" });
-        doc.text("Wilson Health Care | Uppal, Hyderabad | Support: +91 70326 87122", 105, 280, { align: "center" });
+        doc.text("SPEK Health Care | Uppal, Hyderabad | Support: +91 70326 87122", 105, 280, { align: "center" });
 
         return doc;
     }
@@ -5239,7 +5239,7 @@
                         <span style="font-size: 0.8rem; color: var(--text-light);">${new Date(order.date).toLocaleDateString()}</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <strong>Total: ₹${order.total.toLocaleString('en-IN')}</strong>
+                        <strong>Total: ?${order.total.toLocaleString('en-IN')}</strong>
                         <span class="status-badge ${order.status === 'Cancelled' ? 'cancelled' : 'success'}" 
                               style="font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; background: ${order.status === 'Cancelled' ? '#fee2e2' : '#dcfce7'}; color: ${order.status === 'Cancelled' ? '#ef4444' : '#166534'};">
                             ${order.status || 'Placed'}

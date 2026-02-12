@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REUSABLE VENTILATOR CIRCUIT - Wilson Health Care</title>
+    <title>REUSABLE VENTILATOR CIRCUIT - SPEK Health Care</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +11,8 @@
     <script src="data.js"></script>
     <style>
         :root {
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
             --secondary: #1e3a8a;
             --accent: #22c55e;
             --bg-light: #f0f9ff;
@@ -98,9 +98,9 @@
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img src="logo.jpg" alt="Wilson Logo">
+            <img src="spek_logo_green_white.svg" alt="SPEK Logo">
             <div class="logo-text">
-                <span class="brand">WILSON</span>
+                <span class="brand">SPEK</span>
                 <span class="sub-brand">HEALTH CARE</span>
             </div>
         </a>
@@ -180,17 +180,17 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Wilson Health Care</h3>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">SPEK Health Care</h3>
                 <p style="color: #94a3b8; font-size: 0.9rem;">India's leading provider of certified medical equipment and professional healthcare services.</p>
             </div>
             <div>
                 <h4 style="margin-bottom: 1rem;">Contact Us</h4>
                 <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-phone"></i> +91 70326 87122</p>
-                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-envelope"></i> SPEKhealthcare7@gmail.com</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 3rem; color: #475569; font-size: 0.8rem;">
-            &copy; 2026 Wilson Health Care. All Rights Reserved.
+            &copy; 2026 SPEK Health Care. All Rights Reserved.
         </div>
     </footer>
 
@@ -240,23 +240,23 @@
         }
 
         function updateBadge() {
-            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const cart = JSON.parse(localStorage.getItem('SPEK-cart')) || [];
             const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
             document.getElementById('cart-count').innerText = totalQty;
         }
 
         function addToCart() {
-            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            const user = JSON.parse(localStorage.getItem('SPEK-user'));
             if (!user) { alert("Please login on the home page first"); window.location.href = 'index.html'; return; }
             
-            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            let cart = JSON.parse(localStorage.getItem('SPEK-cart')) || [];
             const existing = cart.find(i => i.id === product.id);
             if (existing) {
                 existing.quantity += quantity;
             } else {
                 cart.push({ ...product, quantity: quantity, cartId: Date.now() });
             }
-            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            localStorage.setItem('SPEK-cart', JSON.stringify(cart));
             showToast("Item added to cart!");
             updateBadge();
         }
@@ -267,7 +267,7 @@
         }
 
         function toggleWishlist() {
-            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            let wishlist = JSON.parse(localStorage.getItem('SPEK-wishlist')) || [];
             const idx = wishlist.findIndex(id => id === product.id);
             const btn = document.getElementById('wish-btn');
             
@@ -282,11 +282,11 @@
                 btn.innerHTML = '<i class="fas fa-heart"></i> In Wishlist';
                 showToast("Added to wishlist!");
             }
-            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+            localStorage.setItem('SPEK-wishlist', JSON.stringify(wishlist));
         }
 
         function checkWishlist() {
-            const wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            const wishlist = JSON.parse(localStorage.getItem('SPEK-wishlist')) || [];
             if (wishlist.includes(product.id)) {
                 const btn = document.getElementById('wish-btn');
                 btn.classList.add('active');

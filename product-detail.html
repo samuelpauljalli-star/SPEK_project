@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Wilson Health Care</title>
+    <title>Product Details - SPEK Health Care</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -483,9 +483,9 @@
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img src="logo.jpg" alt="Wilson Logo">
+            <img src="spek_logo_green_white.svg" alt="SPEK Logo">
             <div class="logo-text">
-                <span class="brand">WILSON</span>
+                <span class="brand">SPEK</span>
                 <span class="sub-brand">HEALTH CARE</span>
             </div>
         </a>
@@ -511,7 +511,7 @@
 
         <!-- Product Details -->
         <div class="product-details">
-            <a href="index.html" class="brand-link">Visit the Wilson Health Care Store</a>
+            <a href="index.html" class="brand-link">Visit the SPEK Health Care Store</a>
             <h1 class="product-title" id="product-title">Loading...</h1>
 
             <div class="rating-row">
@@ -549,7 +549,7 @@
             <table class="spec-table">
                 <tr>
                     <td class="label">Brand</td>
-                    <td>Wilson Health Care</td>
+                    <td>SPEK Health Care</td>
                 </tr>
                 <tr>
                     <td class="label">Category</td>
@@ -600,8 +600,8 @@
             <button class="btn-amazon btn-amazon-secondary" onclick="handleBuyNow()">Buy Now</button>
 
             <div style="font-size: 0.8rem; color: var(--text-light); margin-top: 15px;">
-                <p>Ships from: <span style="color: var(--text-main);">Wilson</span></p>
-                <p>Sold by: <span style="color: var(--text-main);">Wilson Store</span></p>
+                <p>Ships from: <span style="color: var(--text-main);">SPEK</span></p>
+                <p>Sold by: <span style="color: var(--text-main);">SPEK Store</span></p>
             </div>
 
             <hr class="hr-divider">
@@ -650,7 +650,7 @@
         }
 
         function renderProduct() {
-            document.title = `${currentProduct.name} - Wilson Health Care`;
+            document.title = `${currentProduct.name} - SPEK Health Care`;
             document.getElementById('product-title').innerText = currentProduct.name;
             document.getElementById('main-product-img').src = currentProduct.image;
             document.getElementById('current-price').innerText = currentProduct.price.toLocaleString('en-IN');
@@ -687,12 +687,12 @@
         }
 
         function handleAddToCart() {
-            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            const user = JSON.parse(localStorage.getItem('SPEK-user'));
             if (!user) {
                 showToast("Please login on the home page first");
                 return;
             }
-            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            let cart = JSON.parse(localStorage.getItem('SPEK-cart')) || [];
             const qty = parseInt(document.getElementById('qty-select').value);
             const existing = cart.find(i => i.id === currentProduct.id);
             if (existing) {
@@ -700,14 +700,14 @@
             } else {
                 cart.push({ ...currentProduct, quantity: qty, cartId: Date.now() });
             }
-            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            localStorage.setItem('SPEK-cart', JSON.stringify(cart));
             showToast(`Added ${qty} item(s) to cart!`);
             updateCartCount();
         }
 
         function handleBuyNow() {
             const qty = document.getElementById('qty-select').value;
-            const text = `Hi Wilson Health Care, I'm interested in ordering ${qty} unit(s) of ${currentProduct.name} (ID: ${currentProduct.id}).`;
+            const text = `Hi SPEK Health Care, I'm interested in ordering ${qty} unit(s) of ${currentProduct.name} (ID: ${currentProduct.id}).`;
             window.open(`https://wa.me/917032687122?text=${encodeURIComponent(text)}`, '_blank');
         }
 
@@ -723,7 +723,7 @@
         }
 
         function updateCartCount() {
-            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const cart = JSON.parse(localStorage.getItem('SPEK-cart')) || [];
             document.getElementById('cart-count').innerText = cart.length;
         }
 
